@@ -13,7 +13,6 @@ public class DatabaseRule extends ExternalResource {
        // String deleteCoursesQuery = "DELETE FROM courses *;";
        // String deleteStudentCoursesQuery = "DELETE FROM students_courses *;";
        con.createQuery(deleteWateringQuery).executeUpdate();
-       // con.createQuery(deleteCoursesQuery).executeUpdate();
        // con.createQuery(deleteStudentCoursesQuery).executeUpdate();
      }
    }
