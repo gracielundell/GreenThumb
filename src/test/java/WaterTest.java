@@ -22,7 +22,7 @@ public class WaterTest {
 
   @Test
   public void save_assignsIdToObject() {
-    Water myWater = new Water("Davis", 0);
+    Water myWater = new Water(5);
     myWater.save();
     Water savedWater = Water.all().get(0);
     assertEquals(myWater.getId(), savedWater.getId());
