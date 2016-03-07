@@ -13,19 +13,19 @@ public class WaterTest {
       assertEquals(Water.all().size(), 0);
   }
 
-  // @Test
-  // public void save_returnsTrueIfDescriptionAreTheSame() {
-  //   Water WaterOne = new Water("Jerry", 0);
-  //   Water WaterTwo = new Water("Jerry", 0);
-  //   assertTrue(WaterOne.equals(WaterTwo));
-  // }
+  @Test
+  public void save_returnsTrueIfDescriptionAreTheSame() {
+    Water WaterOne = new Water(5);
+    Water WaterTwo = new Water(5);
+    assertTrue(WaterOne.equals(WaterTwo));
+  }
 
-  // @Test
-  // public void save_assignsIdToObject() {
-  //   Water myWater = new Water("Davis", 0);
-  //   myWater.save();
-  //   Water savedWater = Water.all().get(0);
-  //   assertEquals(myWater.getId(), savedWater.getId());
-  // }
+  @Test
+  public void save_assignsIdToObject() {
+    Water myWater = new Water("Davis", 0);
+    myWater.save();
+    Water savedWater = Water.all().get(0);
+    assertEquals(myWater.getId(), savedWater.getId());
+  }
 
 }
