@@ -47,5 +47,21 @@ public class Water {
     try(Connection con = DB.sql2o.open()) {
       return con.createQuery(sql).executeAndFetch(Water.class);
     }
-  }    
+  }
+
+  public static Water find(int id) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM watering where id=:id";
+      Water water = con.createQuery(sql)
+        .addParameter("id", id)
+        .executeAndFetchFirst(Water.class);
+      return water;
+    }
+  }
+
+
+
+
+
+
 }

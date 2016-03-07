@@ -28,4 +28,13 @@ public class WaterTest {
     assertEquals(myWater.getId(), savedWater.getId());
   }
 
+  @Test
+  public void find_findWateringInDatabase_true() {
+    Water myWater = new Water(5);
+    myWater.save();
+    Water savedWater = Water.find(myWater.getId());
+    assertTrue(myWater.equals(savedWater));
+  }
+  
+
 }
