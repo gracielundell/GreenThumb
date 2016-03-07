@@ -44,4 +44,14 @@ public class Plant {
 			return con.createQuery(sql).executeAndFetch(Plant.class);
 		}
 	}
+
+	public static Plant find(int id) {
+		try(Connection con = DB.sql2o.open()) {
+			String sql = "SELECT * FROM plants where id=:id";
+			Plant plant = con.createQuery(sql)
+				.addParameter("id", id)
+				.executeAndFetchFirst(Plant.class);
+			return plant;
+		}
+	}
 }

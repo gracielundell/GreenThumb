@@ -20,4 +20,19 @@ public class PlantTest {
   	assertTrue(plantOne.equals(plantTwo));
   }
 
+  @Test
+  public void save_assignIdToObject() {
+  	Plant myPlant = new Plant("Marigold");
+  	myPlant.save();
+  	Plant savedPlant = Plant.all().get(0);
+  	assertEquals(myPlant.getId(), savedPlant.getId());
+  }
+
+  @Test
+  public void find_findPlantInDatabase_true() {
+  	Plant myPlant = new Plant("Marigold");
+  	myPlant.save();
+  	Plant savedPlant = Plant.find(myPlant.getId());
+  	assertTrue(myPlant.equals(savedPlant));
+  }
 }  
