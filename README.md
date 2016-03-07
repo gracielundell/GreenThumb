@@ -21,6 +21,9 @@
 ## Technologies Used
 
 * Java
+* CSS
+* SASS
+* JavaScript
 * Spark
 * Junit
 * Velocity
