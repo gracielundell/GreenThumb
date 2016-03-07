@@ -1,0 +1,18 @@
+plant.vtl
+
+
+<h1>$plant.getName()'s watering schedule</h1>
+
+#foreach ($wateringSchedule in $plant.getWateringSchedules())
+<ul>
+  <li><h3>$wateringSchedule.getFrequency()</h3>
+    <a href="/delete/wateringSchedule/$wateringSchedule.getId()">Remove</a>
+  </li>
+</ul>
+#end
+
+<ul>
+  <li>
+    <a href="/">Return to main page</a>
+  </li>
+</ul>

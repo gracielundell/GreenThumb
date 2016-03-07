@@ -84,4 +84,13 @@ public class Water {
         .executeUpdate();
     }
   }
+
+  public List<Plant> getPlants() {
+    try(Connection con = DB.sql2o.open()){
+      String sql = "SELECT plants.* FROM watering JOIN plants_watering ON (plants_watering.water_id = watering.id) JOIN watering ON (watering.id = plants_watering.water_id) WHERE water_id=:id";
+      return con.createQuery(sql)
+        .addParameter("id", this.id)
+        .executeAndFetch(Plant.class);
+      }
+  }  
 }

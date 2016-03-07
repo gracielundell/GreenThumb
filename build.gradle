@@ -3,7 +3,7 @@ apply plugin: 'application'
 
 archivesBaseName = "Java-GreenThumb"
 version = '1.0'
-applicationName = "fileName"
+applicationName = "GreenThumb"
 mainClassName = "App"
 
 repositories {

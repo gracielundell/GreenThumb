@@ -47,7 +47,7 @@ public class Plant {
 	}
 
 	public static List<Plant> all() {
-		String sql = "SELECT id, name FROM plants";
+		String sql = "SELECT name FROM plants";
 		try(Connection con = DB.sql2o.open()) {
 			return con.createQuery(sql).executeAndFetch(Plant.class);
 		}
@@ -83,4 +83,23 @@ public class Plant {
 				.executeUpdate();
 		}
 	}
+
+  public List<Water> getWateringSchedules() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT watering.* FROM plants JOIN plants_watering ON (plants.id = plants_watering.plant_id) JOIN watering ON (plants_watering.water_id = watering.id) WHERE plant_id=:id";
+      return con.createQuery(sql)
+        .addParameter("id", this.id)
+        .executeAndFetch(Water.class);
+    }
+  }	
+
+  public void addWatering(Water water) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO plants_watering (plant_id, water_id) VALUES (:plant_id, :water_id);";
+      con.createQuery(sql)
+        .addParameter("water_id", water.getId())
+        .addParameter("plant_id", this.getId())
+        .executeUpdate();
+    }
+  }  
 }

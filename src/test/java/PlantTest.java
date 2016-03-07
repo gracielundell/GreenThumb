@@ -1,6 +1,7 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.sql2o.*;
+import java.util.List;
 
 public class PlantTest {
 
@@ -52,4 +53,15 @@ public class PlantTest {
   	myPlant.delete();
   	assertEquals(Plant.all().size(), 0);
   }
+
+  @Test
+  public void getWaterinpgSchedule_returnsAllWateringSchedules_ArrayList() {
+    Plant myPlant = new Plant("Marigold");
+    myPlant.save();
+    Water myWater = new Water(3);
+    myWater.save();
+    myPlant.addWatering(myWater);
+    List savedWatering = myWater.getWateringSchedules();
+    assertEquals(savedWatering.size(), 1);
+  }  
 }  
