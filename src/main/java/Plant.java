@@ -9,12 +9,20 @@ public class Plant {
 		this.name = name;
 	}
 
+
+	//Getter
 	public String getName() {
 		return name;
 	}
 
 	public int getId() {
 		return id;
+	}
+
+
+	//Setter
+	public void setName(String newName) {
+		this.name = newName;
 	}
 
 	@Override
@@ -52,6 +60,27 @@ public class Plant {
 				.addParameter("id", id)
 				.executeAndFetchFirst(Plant.class);
 			return plant;
+		}
+	}
+
+	//Update
+	public void update() {
+		try(Connection con = DB.sql2o.open()) {
+			String sql = "UPDATE plants SET name = :name WHERE id=:id";
+			con.createQuery(sql)
+				.addParameter("name", this.name)
+				.addParameter("id", this.id)
+				.executeUpdate();
+		}
+	}
+
+	//Delete
+	public void delete() {
+		try(Connection con = DB.sql2o.open()) {
+			String sql = "DELETE FROM plants where id=:id";
+			con.createQuery(sql)
+				.addParameter("id", this.id)
+				.executeUpdate();
 		}
 	}
 }

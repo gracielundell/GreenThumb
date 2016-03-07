@@ -35,4 +35,21 @@ public class PlantTest {
   	Plant savedPlant = Plant.find(myPlant.getId());
   	assertTrue(myPlant.equals(savedPlant));
   }
+
+  @Test
+  public void update_updatesAllWateringProperties() {
+  	Plant myPlant = new Plant("Marigold");
+  	myPlant.save();
+  	myPlant.setName("Tomatoe");
+  	myPlant.update();
+  	assertEquals("Tomatoe", myPlant.getName());
+  }
+
+  @Test
+  public void delete_deletePlantFromDatabase() {
+  	Plant myPlant = new Plant("Marigold");
+  	myPlant.save();
+  	myPlant.delete();
+  	assertEquals(Plant.all().size(), 0);
+  }
 }  
