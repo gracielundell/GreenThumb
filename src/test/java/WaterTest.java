@@ -15,9 +15,9 @@ public class WaterTest {
 
   @Test
   public void save_returnsTrueIfDescriptionAreTheSame() {
-    Water WaterOne = new Water(5);
-    Water WaterTwo = new Water(5);
-    assertTrue(WaterOne.equals(WaterTwo));
+    Water waterOne = new Water(5);
+    Water waterTwo = new Water(5);
+    assertTrue(waterOne.equals(waterTwo));
   }
 
   @Test
