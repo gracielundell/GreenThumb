@@ -450,7 +450,7 @@ body {
 .page-wrapper {
   width: 100vw;
   height: 144vh;
-  background-image: url("../img/watering.jpg");
+  background-image: url("../../img/watering.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 70% 100%;
