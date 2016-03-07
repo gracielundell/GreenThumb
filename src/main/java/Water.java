@@ -6,7 +6,7 @@ public class Water {
 	private int id;
 	private int frequency;
 
-
+//Getter
 	public Water(int frequency) {
 		this.frequency = frequency;
 	}
@@ -17,6 +17,11 @@ public class Water {
 
 	public int getFrequency() {
 		return frequency;
+	}
+
+//Setter
+	public void setFrequency(int newFrequency) {
+		this.frequency = newFrequency;
 	}
 
   @Override
@@ -59,9 +64,24 @@ public class Water {
     }
   }
 
+  //UPDATE
+  public void update() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "UPDATE watering SET frequency = :frequency WHERE id = :id";
+      con.createQuery(sql)
+        .addParameter("frequency", this.frequency)
+        .addParameter("id", id)
+        .executeUpdate();
+      }
+  }
 
-
-
-
-
+  //DELETE//
+  public void delete() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "DELETE FROM watering WHERE id = :id";
+      con.createQuery(sql)
+        .addParameter("id", this.id)
+        .executeUpdate();
+    }
+  }
 }

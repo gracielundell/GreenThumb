@@ -35,6 +35,21 @@ public class WaterTest {
     Water savedWater = Water.find(myWater.getId());
     assertTrue(myWater.equals(savedWater));
   }
-  
 
+  @Test
+  public void update_updatesAllWateringProperties() {
+    Water newWater = new Water(5);
+    newWater.save();
+    newWater.setFrequency(3);
+    newWater.update();
+    assertEquals(3, newWater.getFrequency());
+  }  
+
+  @Test
+  public void delete_removesWaterFromTheDatabase() {
+    Water newWater = new Water(5);
+    newWater.save();
+    newWater.delete();
+    assertEquals(Water.all().size(), 0);
+  }
 }
