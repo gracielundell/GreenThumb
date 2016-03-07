@@ -1,0 +1,36 @@
+<div class="jumbotron">
+  <h1>Hair Salon</h1>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="well">
+      <h3>New Stylist</h3>
+      <form action="/" method="post">
+        <div class="form-group">
+          <label for="stylist-name">Name:</label>
+          <input class="form-control" type="text" name="stylist-name" id="stylist-name">
+          <br>
+          <label for="stylist-availability">Availability [ex: Mon-Wed, Tues-Fri]:</label>
+          <input class="form-control" type="text" name="stylist-availability" id="stylist-availability">
+        </div>
+        <button type="submit" id="addStylist" class="btn btn-success btn-lg">Add Stylist</button>
+      </form>
+    </div>
+  </div>
+   <div class="col-md-6">
+     #if($stylists)
+    <div class="well">
+        <h4>Stylists Available</h4>
+          <ul>
+          #foreach($stylist in $stylists)
+          <li><a href="/stylist/$stylist.getId()">$stylist.getName()</a></li>
+          #end
+        </ul>
+      #else
+      <h4>No Stylists Created.</h4>
+    </div>
+    #end
+  </div>
+</div>
+Status API Training Shop Blog About Pricing
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
