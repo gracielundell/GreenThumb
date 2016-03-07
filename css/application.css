@@ -4,25 +4,38 @@
   background-position: center; }
 
 .wrapper {
-  margin: 30px;
+  height: 60vh; }
+  .wrapper h4 {
+    text-align: center; }
+
+.plotPage {
+  width: 80vw;
+  height: 80vh; }
+
+.plot {
+  margin: 10px;
+  margin-top: 50px;
   display: flex;
-  width: 450px; }
+  width: 100%; }
 
 .box {
   border: 1px solid lime;
-  height: 150px;
-  width: 150px;
+  height: 70px;
+  width: 70px;
   background-image: url("../img/dirt.png"); }
 
 .circles {
-  margin: 20px;
+  overflow: auto;
+  height: 30vh;
+  border: 2px solid green;
+  margin: 4px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
 
 .circle {
-  height: 140px;
-  width: 140px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   margin: 10px;
   border: 1px solid orange; }
