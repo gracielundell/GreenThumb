@@ -8,24 +8,24 @@
   height: 80vh; }
 
 .wrapper {
-  height: 60vh; }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+  .wrapper p {
+    margin-bottom: 0px;
+    text-align: center; }
 
 .plot {
-  flex: .1 .1 10%;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  margin: 0px; }
+  margin: 10px 0; }
 
 .box {
   border: 1px solid lime;
   height: 30px;
   width: 30px;
   background-image: url("../../img/dirt.png"); }
-  @media (min-width: 760px) {
-    .box {
-      height: 50px;
-      width: 50px; } }
 
 .selectSize .dimensions {
   width: 100%;
@@ -36,16 +36,6 @@
   margin: 0 5px;
   margin-top: 16px;
   justify-content: space-between; }
-
-.inputSize {
-  display: none; }
-  @media (min-width: 760px) {
-    .inputSize {
-      display: block; } }
-
-@media (min-width: 760px) {
-  .selectSize {
-    display: none; } }
 
 .circles {
   overflow: auto;
