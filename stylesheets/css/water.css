@@ -455,6 +455,13 @@ body {
   position: absolute;
   width: 1px; }
 
+.time-select button[type="submit"] {
+  width: 50vh;
+  flex: 1 1 100%;
+  background: orange;
+  border: none;
+  border-radius: 3px; }
+
 .page-wrapper {
   width: 100vw;
   height: 170vh;
@@ -487,7 +494,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 8px solid orange; }
+  border: 8px solid orange;
+  transition: all .4s linear; }
 
 h5 {
   align-self: flex-end;
@@ -528,6 +536,35 @@ form.time-select {
     flex: 1 1 33%;
     width: 100%;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-items: baseline; }
+  form.time-select span.down-arrow {
+    width: 0;
+    height: 0;
+    border-top: .7em solid black;
+    border-left: .7em solid transparent;
+    border-right: .7em solid transparent; }
+
+.reorder {
+  justify-content: flex-start;
+  align-items: space-between;
+  align-content: center;
+  height: 20vh; }
+
+.prioritize {
+  transform: scale(1.5);
+  order: -2; }
+
+.priority-two {
+  order: -1;
+  flex: 1 1 100%;
+  margin: 5em 0 15em 0; }
+
+.priority-three {
+  order: -1;
+  margin: -10em 0 15em 0; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=water.css.map */

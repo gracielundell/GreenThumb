@@ -68,3 +68,11 @@
   background-repeat: no-repeat;
 }
 
+@mixin down-arrow {
+  width: 0;
+  height: 0;
+  border-top: .7em solid black;
+  border-left: .7em solid transparent;
+  border-right: .7em solid transparent;
+}
+

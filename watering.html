@@ -12,11 +12,11 @@
 		</div>
 		<div class="week-calendar">
 			<form class="time-select">
+				<label for="select-all">Click to create one repeating reminder
+				<input type="checkbox" id="select-all" name="select-all">
+				</label>
 				<input type="text" placeholder="reminder name">
 				<div class="day monday">
-					<label for="select-all">Check to repeat
-					<input type="checkbox" id="select-all" name="select-all">
-					</label>
 					<h5>Monday</h5>
 					<div class="select-group">
 						<select class="hours">
@@ -99,6 +99,7 @@
 							<option selected="selected">AM</option>
 							<option>PM</option>
 						</select>
+						<span class="down-arrow">&nbsp;</span>
 					</div>
 				</div>
 				<div class="day tuesday">
@@ -184,6 +185,7 @@
 								<option>AM</option>
 								<option>PM</option>
 							</select>
+							<span class="down-arrow">&nbsp;</span>
 						</div>
 				</div>
 				<div class="day wednesday">
@@ -269,6 +271,7 @@
 							<option>AM</option>
 							<option>PM</option>
 						</select>
+						<span class="down-arrow">&nbsp;</span>
 					</div>
 				</div>
 				<div class="day thursday">
@@ -354,6 +357,7 @@
 								<option>AM</option>
 								<option>PM</option>
 							</select>
+							<span class="down-arrow">&nbsp;</span>
 						</div>
 				</div>
 				<div class="day friday">
@@ -439,6 +443,7 @@
 							<option>AM</option>
 							<option>PM</option>
 						</select>
+						<span class="down-arrow">&nbsp;</span>
 					</div>
 				</div>
 				<div class="day saturday">
@@ -524,6 +529,7 @@
 							<option>AM</option>
 							<option>PM</option>
 						</select>
+						<span class="down-arrow">&nbsp;</span>
 					</div>
 				</div>	
 				<div class="day sunday">
@@ -609,8 +615,10 @@
 								<option>AM</option>
 								<option>PM</option>
 							</select>
+							<span class="down-arrow">&nbsp;</span>
 						</div>
 				</div>
+				<button type="submit">Submit</button>
 			</form>
 		</div>
 	</div>

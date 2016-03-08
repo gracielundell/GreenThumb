@@ -32,6 +32,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	border: 8px solid $water-bg-color;
+	transition: all .4s linear;
 }
 	
 
@@ -88,8 +89,42 @@ form.time-select {
 		width: 100%;
 		display: flex;
 		justify-content: center;	
+		align-items: baseline;
+	}
+
+	span.down-arrow {
+		@include down-arrow;
 	}
 }
+
+
+.reorder {
+	justify-content: flex-start;
+	align-items: space-between;
+	align-content: center;
+	height: 20vh;
+}
+
+.prioritize {
+	transform: scale(1.5);
+	order: -2;
+}
+
+.priority-two {
+	order: -1;
+	flex: 1 1 100%;
+	margin: 5em 0 15em 0;
+}
+
+.priority-three {
+	order: -1;
+	margin: -10em 0 15em 0;
+}
+
+.hidden {
+	display: none;
+}
+
 
 
 
