@@ -1,56 +1,54 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 import java.util.List;
+import org.sql2o.*;
 
 public class PlantTest {
 
   @Rule
   public DatabaseRule database = new DatabaseRule();
 
-
-  @Test
-  public void book_instantiatesCorrectly_true() {
-    Plant newPlant = new Plant("Marigold");
-    assertTrue(newPlant instanceof Plant);
-  }
-
-  @Test
   public void all_emptyAtFirst() {
-    assertEquals(Plant.all().size(), 0);
+      assertEquals(Water.all().size(), 0);
   }
 
   @Test
-  public void equals_returnsTrueIfPlantNamesAreTheSame() {
-    Plant newPlantOne = new Plant("Marigold");
-    Plant newPlantTwo = new Plant("Marigold");
-    assertTrue(newPlantOne.equals(newPlantTwo));
+  public void save_returnsTrueIfNameOfObjectAreTheSame() {
+  	Plant plantOne = new Plant("Marigold");
+  	Plant plantTwo = new Plant("Marigold");
+  	assertTrue(plantOne.equals(plantTwo));
   }
 
   @Test
-  public void getTasks_returnsAllTasks_ArrayList() {
-    Task myTask = new Task("Water");
-    myTask.save();
-
-    Plant myPlant = new Plant("Marigold");
-    myPlant.save();
-
-    myPlant.addTask(myTask);
-    List<Task> savedTasks = myPlant.getTasks();
-    assertEquals(savedTasks.size(), 1);
+  public void save_assignIdToObject() {
+  	Plant myPlant = new Plant("Marigold");
+  	myPlant.save();
+  	Plant savedPlant = Plant.all().get(0);
+  	assertEquals(myPlant.getId(), savedPlant.getId());
   }
 
   @Test
-  public void findByPlant_returnsTasksByPlant() {
-    Task newTask1 = new Task("Water");
-    Task newTask2 = new Task("Fertilize");
-    Plant testPlant = new Plant("Marigold");
-    testPlant.save();
-    newTask1.save();
-    newTask2.save();
-    newTask1.addPlant(testPlant);
-    newTask2.addPlant(testPlant);
-    assertTrue((testPlant.getTasks()).contains(newTask1));
-    assertTrue((testPlant.getTasks()).contains(newTask2));
+  public void find_findPlantInDatabase_true() {
+  	Plant myPlant = new Plant("Marigold");
+  	myPlant.save();
+  	Plant savedPlant = Plant.find(myPlant.getId());
+  	assertTrue(myPlant.equals(savedPlant));
   }
 
+  @Test
+  public void update_updatesAllWateringProperties() {
+  	Plant myPlant = new Plant("Marigold");
+  	myPlant.save();
+  	myPlant.setName("Tomatoe");
+  	myPlant.update();
+  	assertEquals("Tomatoe", myPlant.getName());
+  }
+
+  @Test
+  public void delete_deletePlantFromDatabase() {
+  	Plant myPlant = new Plant("Marigold");
+  	myPlant.save();
+  	myPlant.delete();
+  	assertEquals(Plant.all().size(), 0);
+  }
 }
