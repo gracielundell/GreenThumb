@@ -1,0 +1,46 @@
+<h3>Plants and tasks</h3>
+
+<p>Create a new Plant:</p>
+
+<form action="/" method="post">
+  <label for="name">Plant</label>
+  <input id="name" name="name" type="text">
+  <button type="submit" class="btn btn-success">Add Plant</button>
+</form>
+
+
+<p> Add tasks to any plant:</p>
+
+<form action="/success" method="post">
+
+  <div class="form-group">
+    <label for="taskId">Select a Plant</label>
+    <select id='taskId' name='taskId' type='text'>
+    #foreach($plant in $plants)
+      <option value="$plant.getId()">$plant.getName()</option>
+    #end
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Task</label>
+    <input id="description" name="description" type="text" class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-info">Add Task</button>
+</form>
+
+#if($plants)
+  <p>Click on a plant to see their tasks:</p>
+  <ul>
+    #foreach($plant in $plants)
+      <li><h3><a href="/plants/$plant.getId() ">$plant.getName()</a></h3>
+        <a href="/delete/plant/$plant.getId()">Remove</a>
+
+
+      </li>
+    #end
+  </ul>
+#else
+  <p>There are no plants yet!</p>
+#end
