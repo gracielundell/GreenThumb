@@ -63,7 +63,6 @@ $(document).ready(function() {
     for (i = 0; i < squareFt; i++) {
       $(".plot").append("<div class='box'></div>")
     };
-    $(".plot").show();
 
     event.preventDefault();
   });
