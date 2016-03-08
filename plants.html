@@ -2,9 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!--Custom stylesheet-->
     <link rel="stylesheet" href="css/application.css" media="screen" title="no title" charset="utf-8">
+
+    <!--jQuery-->
     <script src="js/jquery-1.12.0.js"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!--Custom javascript-->
     <script src="js/scripts.js" charset="utf-8"></script>
+
     <title>Plants</title>
   </head>
   <body>
@@ -13,9 +28,9 @@
         <th rowspan="2">Vegetable</th>
         <th rowspan="2">Start plants indoors this long before planting date</th>
         <th colspan="4">Planting dates</th>
-        <th>Amount to plant for family of four</th>
-        <th>Distance between rows</th>
-        <th>Distance apart in the row</th>
+        <th rowspan="2">Amount to plant for family of four</th>
+        <th rowspan="2">Distance between rows</th>
+        <th rowspan="2">Distance apart in the row</th>
       </tr>
       <tr>
         <th>Region 1. Coast, Astoria to Brookings</th>
@@ -24,7 +39,7 @@
         <th>Region 4. Columbia and Snake valleys, Hermiston, Pendleton, Ontario</th>
       </tr>
       <tr>
-        <td>Artichokes (globe)</td>
+        <td><a data-target="#artichokeModal" href="#artichokeModal" data-toggle="modal">Artichokes (globe)</a></td>
         <td>
           crown pieces
         </td>
@@ -195,5 +210,30 @@
         </td>
       </tr>
     </table>
+
+    <!-- Modals-->
+
+    <!-- Artichoke Modal-->
+    <div class="modal fade" id="artichokeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Plant Information</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              Username:<br>
+              <input type="text" class="form-control" name="username"><br>
+              Password:<br>
+              <input type="text" class="form-control" name="password"><br>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" data-dismiss="modal" role="button">Log In</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
   </body>
 </html>
