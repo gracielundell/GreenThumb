@@ -3,8 +3,8 @@
 <head>
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="css/application.css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="stylesheets/css/main.css">
+	<link rel="stylesheet" href="stylesheets/css/application.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 <div class="raised-bed">
@@ -28,55 +28,35 @@
 			<p>pest solution center</p>
 		</div>
 	</div>
+
 	<div class="phyllum plotPage">
 		<div class="feature-header">
-			<p>plot planning</p>
+			<p>Plan Your Plot</p>
+		</div>
 			<div class="wrapper">
-				<h4>Plan Your Plot</h4>
+
+				<!-- imput fields for plot dimensions -->
+				<form>
+					<label for="width">Plot Width(ft)</label>
+            <input id="width" type="text">
+					<label for="height">Plot Length(ft)</label>
+            <input id="height" type="text">
+              <button type="submit" class="btn btn-lg">Plan Your Plot!</button>
+				</form>
+
 				<div class="plot">
-					<div class="row">
-						<div class="box">
-						</div>
-						<div class="box">
-
-						</div>
-						<div class="box">
-
-						</div>
-
-					</div><!-- end row 1 -->
-					<div class="row">
-						<div class="box">
-
-						</div>
-						<div class="box">
-
-						</div>
-						<div class="box">
-
-						</div>
-
-					</div><!-- end row 2 -->
-					<div class="row">
-						<div class="box">
-
-						</div>
-						<div class="box">
-
-						</div>
-						<div class="box">
-
-						</div>
-
-					</div><!-- end row 3 -->
+					<!-- where plot dimensions will be -->
 				</div><!-- end plot -->
 
 			  <div class="circles">
 					<!-- where different veggie circle will be placed -->
 			  </div><!-- end circles div -->
-		</div>	<!-- end plot planning pg -->
-	</div><!-- end wrapper -->
-</div> <!-- end raised-bed div -->
+
+			</div>	<!-- end wrapper -->
+
+		</div> <!-- end plot page div -->
+
+</div> <!-- end raised bed div -->
 
 <script type="text/javascript" src="js/jquery-1.12.0.js"></script>
 <script type="text/javascript" src="js/intro.js"></script>

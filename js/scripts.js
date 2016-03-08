@@ -2,7 +2,7 @@ var squareImg = "red";
 
 var circleArray = [
   {
-    imgSource: "carrot.png"
+    imgSource: "dirt.png"
   },
   {
     imgSource: "flower.png"
@@ -20,7 +20,7 @@ var circleArray = [
     imgSource: "garlic.jpg"
   },
   {
-    imgSource: "dirt.png"
+    imgSource: "carrot.png"
   }
 ];
 
@@ -28,6 +28,11 @@ var circleArray = [
 function createCircleDiv(circle) {
   return "<div class='circle' style='background-image:" + "url(\"img/" + circle.imgSource + "\")'></div>"
 };
+
+// create box divs for plot size
+function createBoxDiv(box) {
+    return "<div class='box'></div>"
+}
 
 // create circles
 $(document).ready(function() {
@@ -48,6 +53,19 @@ $(document).ready(function() {
 
     squareImg = $(event.target).css("background-image");
     $(event.target).addClass("selected");
+  });
+
+  // INPUT FIELDS FOR PLOT SIZE
+  $("form").submit(function(event) {
+    var width = parseInt($("input#width").val());
+    var height = parseInt($("input#height").val());
+    var squareFt = width * height;
+    for (i = 0; i < squareFt; i++) {
+      $(".plot").append("<div class='box'></div>")
+    };
+    $(".plot").show();
+
+    event.preventDefault();
   });
 
 });

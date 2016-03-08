@@ -6,28 +6,29 @@
 .wrapper {
   height: 60vh; }
   .wrapper h4 {
-    text-align: center; }
+    text-align: center;
+    margin: 10px; }
 
 .plotPage {
   width: 80vw;
   height: 80vh; }
 
 .plot {
-  margin: 10px;
-  margin-top: 50px;
+  width: 210px;
+  justify-content: center;
   display: flex;
-  width: 100%; }
+  flex-wrap: wrap; }
 
 .box {
   border: 1px solid lime;
   height: 70px;
   width: 70px;
-  background-image: url("../img/dirt.png"); }
+  background-image: url("../../img/dirt.png"); }
 
 .circles {
   overflow: auto;
-  height: 30vh;
-  border: 2px solid green;
+  height: 20vh;
+  border: 2px solid darkkhaki;
   margin: 4px;
   display: flex;
   flex-direction: row;
