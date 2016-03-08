@@ -67,8 +67,8 @@ $(document).ready(function() {
     //   $(".plot").css("width", (width * 32));
     //   $(".plot").css("height", (height * 32));
     // }
+    $(".plot").empty();
     $(".plot").css("width", (width * 32));
-    $(".plot").css("height", (height * 32));
     for (i = 0; i < squareFt; i++) {
       $(".plot").append("<div class='box'></div>")
     };
