@@ -3,27 +3,52 @@
   background-repeat: no-repeat;
   background-position: center; }
 
-.wrapper {
-  height: 60vh; }
-  .wrapper h4 {
-    text-align: center;
-    margin: 10px; }
-
 .plotPage {
-  width: 80vw;
+  width: 100%;
   height: 80vh; }
 
+.wrapper {
+  height: 60vh; }
+
 .plot {
-  width: 210px;
+  width: 337px;
   justify-content: center;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 0px; }
+  @media (min-width: 760px) {
+    .plot {
+      width: 100%; } }
 
 .box {
   border: 1px solid lime;
-  height: 70px;
-  width: 70px;
+  height: 30px;
+  width: 30px;
   background-image: url("../../img/dirt.png"); }
+  @media (min-width: 760px) {
+    .box {
+      height: 50px;
+      width: 50px; } }
+
+.selectSize .dimensions {
+  width: 100%;
+  display: flex; }
+  .selectSize .dimensions p {
+    font-size: 15px; }
+.selectSize select {
+  margin: 0 5px;
+  margin-top: 16px;
+  justify-content: space-between; }
+
+.inputSize {
+  display: none; }
+  @media (min-width: 760px) {
+    .inputSize {
+      display: block; } }
+
+@media (min-width: 760px) {
+  .selectSize {
+    display: none; } }
 
 .circles {
   overflow: auto;

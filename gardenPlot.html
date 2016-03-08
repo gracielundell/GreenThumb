@@ -9,15 +9,66 @@
     <title>greenThumb</title>
   </head>
   <body>
+    <div class="phyllum plotPage">
+  		<div class="feature-header">
+  			<p>Plan Your Plot</p>
+  		</div>
+  			<div class="wrapper">
 
-    <div class="plotWidth">
-      <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
+  				<!-- imput fields for plot dimensions -->
+          <form class="selectSize">
+            <div class="dimensions">
+              <p>Plot Width (ft)</p>
+                 <select id="width">
+                   <option value="No Size Selected">Width</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
+                   <option value="6">6</option>
+                   <option value="7">7</option>
+                   <option value="8">8</option>
+                   <option value="9">9</option>
+                   <option value="10">10</option>
+                 </select>
+              <p>Plot Length (ft)</p>
+              <select id="height">
+                <option value="No Size Selected">Length</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+               <button type="submit" class="btn btn-lg">Plan Your Plot!</button>
+          </form>
+
+  				<form class="inputSize">
+  					<label for="width">Plot Width(ft)</label>
+              <input id="width" type="text">
+  					<label for="height">Plot Length(ft)</label>
+              <input id="height" type="text">
+                <button type="submit" class="btn btn-lg">Plan Your Plot!</button>
+  				</form>
+
+  				<div class="plot">
+  					<!-- where plot dimensions will be -->
+  				</div><!-- end plot -->
+
+  			  <div class="circles">
+  					<!-- where different veggie circle will be placed -->
+  			  </div><!-- end circles div -->
+
+  			</div>	<!-- end wrapper -->
+
+  		</div> <!-- end plot page div -->
 
   </body>
 </html>
