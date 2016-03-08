@@ -362,7 +362,15 @@ th {
 html {
   box-sizing: border-box; }
 
-div, p {
+div, p, h3 {
+  margin: 0;
+  padding: 0; }
+
+select,
+option,
+input,
+label {
+  box-sizing: content-box;
   margin: 0;
   padding: 0; }
 
@@ -449,54 +457,77 @@ body {
 
 .page-wrapper {
   width: 100vw;
-  height: 144vh;
-  background-image: url("../../img/watering.jpg");
+  height: 170vh;
+  background: url("../../img/watering.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 70% 100%;
-  margin: 0;
-  padding: 0; }
+  background-repeat: no-repeat; }
 
 .water-header {
   width: 100%;
   height: 10vh; }
   .class:nth-child(1) .water-header {
     background: #ffffbd; }
-  .water-header p {
-    color: #ffffcc;
-    margin: 0;
-    padding: 0; }
+  .water-header h3 {
+    color: black;
+    font-size: 1.8em; }
 
 .week-calendar {
   width: 100vw;
-  height: 132vh;
+  height: 150vh; }
+
+.day {
+  width: 50vw;
+  height: 50vw;
+  border-radius: 100%;
+  flex: 0 0 50%;
+  background: url("../../img/water-png.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 8px solid orange; }
+
+h5 {
+  align-self: flex-end;
+  text-align: right;
+  color: black;
+  font-size: 1.2em; }
+
+form.time-select {
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  aligin-content: space-between; }
-
-.day {
-  width: 40vw;
-  height: 12vh;
-  flex: .5 .5 50%; }
-
-.schedule {
-  width: 100%;
-  height: 40vw;
-  -webkit-appearance: none;
-  border: none;
-  outline: none;
-  background: rgba(84, 208, 179, 0.5);
-  border-radius: 3px;
-  border: 2px solid #54D083;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-input[type="datetime-local"] {
-  webkit-appearance: none;
-  border: none;
-  outline: none;
-  box-sizing: content-box; }
+  height: 150vh; }
+  form.time-select select,
+  form.time-select option,
+  form.time-select input[type='text'] {
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: black; }
+  form.time-select label {
+    font-size: .6em; }
+  form.time-select select {
+    font-size: 2em;
+    text-align: center; }
+  form.time-select input[type='text'] {
+    font-size: .8em;
+    border: 4px inset lime;
+    border-radius: 3px;
+    line-height: 2;
+    width: 80%;
+    align-self: center; }
+  form.time-select input[type="text"]::-webkit-input-placeholder {
+    color: black; }
+  form.time-select .select-group {
+    flex: 1 1 33%;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
 
 /*# sourceMappingURL=water.css.map */

@@ -62,3 +62,9 @@
   }
 }
 
+@mixin bg-img($url, $ext: jpg) {
+  background: url($img-path + '/' + $url + "." + $ext);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+

@@ -9,9 +9,20 @@ html {
   box-sizing: border-box;
 }
 
-div, p {
+div, p, h3{
 	margin: 0;
 	padding: 0;
+}
+
+
+select,
+option, 
+input, 
+label {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+
 }
 
 /**

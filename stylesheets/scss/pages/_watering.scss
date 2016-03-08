@@ -1,61 +1,95 @@
 
-$button-height: 12vh;
+
 
 .page-wrapper {
 	width: 100vw;
-	height: $button-height * (7 + 5);
-	background-image: url('#{$img-path}/watering.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 70% 100%;
-	margin: 0;
-	padding: 0;
+	height: $day-height * 10 + 20;
+	@include bg-img(watering);
 }
 
 .water-header {
 	@include feature-header(water-header, #ffffcc, 1);
-	p {
-		color: #ffffcc;
-		margin: 0;
-		padding: 0;
+	h3 {
+		color: $water-color;
+		font-size: 1.8em;
 	}
 }
 
 
 .week-calendar {
 	width: 100vw;
-	height: $button-height * (7 + 4);
+	height: $day-height * 10;
+}
+
+.day {
+	width: 50vw;
+	height: 50vw;
+	border-radius: 100%;
+	flex: 0 0 50%;
+	@include bg-img(water-png, png);
+	background-position: 0% 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 8px solid $water-bg-color;
+}
+	
+
+	h5 {
+		align-self: flex-end;
+		text-align: right;
+		color: $water-color;
+		font-size: 1.2em;
+	}
+
+
+form.time-select {
+	width: 100vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	aligin-content: space-between;
+	height: $day-height * 10;
+	
+	select,
+	option,
+	input[type='text'] {
+		-webkit-appearance: none;
+		background: transparent;
+		border: none;
+		outline: none;
+		font-weight: bold;
+		color: $water-color;	
+	}
+
+	label {
+		font-size: .6em;
+	}
+
+	select {
+		font-size: 2em;
+		text-align: center;
+	}
+
+	input[type='text'] {
+		font-size: .8em;
+		border: 4px inset lime;
+		border-radius: $radius;
+		line-height: 2;
+		width: 80%;
+		align-self: center;
+	}
+
+	input[type="text"]::-webkit-input-placeholder {
+			color: $water-color;
+	}
+
+	.select-group {
+		flex: 1 1 33%;
+		width: 100%;
+		display: flex;
+		justify-content: center;	
+	}
 }
 
 
 
-.day {
-	width: 40vw;
-	height: $button-height;
-	flex: .5 .5 50%;
-}
-
-.schedule {
-	width: 100%;
-	height: 40vw;
-	-webkit-appearance: none;
-	border: none;
-	outline: none;
-	background: rgba(#54D0B3, .5);
-	border-radius: 3px;
-	border: 2px solid #54D083;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-input[type="datetime-local"] {
-	webkit-appearance: none;
-	border: none;
-	outline: none;
-	box-sizing: content-box;
-}
