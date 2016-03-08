@@ -69,7 +69,7 @@
       </tr>
       <tr>
         <td>
-          Asparagus
+          <a data-target="#asparagusModal" href="#asparagusModal" data-toggle="modal">Asparagus</a>
         </td>
         <td>
           1 year
@@ -211,7 +211,7 @@
       </tr>
     </table>
 
-    <!-- Modals-->
+    <!--ALL MODALS-->
 
     <!-- Artichoke Modal-->
     <div class="modal fade" id="artichokeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -261,5 +261,58 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+    <!-- Asparagus Modal-->
+    <div class="modal fade" id="asparagusModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Plant Information</h4>
+          </div>
+          <div class="modal-body">
+            <img src="img/catalog/asparagus.jpg">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <form>
+              What region would you grow this plant?<br>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="asparagusOption1" value="option1">
+                  Region 1: Coast, Astoria to Brookings
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="asparagusOption2" value="option2">
+                  Region 2: Western valleys, Portland to Roseburg
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="asparagusOption3" value="option3">
+                  Region 3: High elevations, mountains, and plateaus of central &amp; eastern Oregon
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="asparagusOption4" value="option4">
+                  Region 4: Columbia and Snake valleys, Hermiston, Pendleton, Ontario
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button class="btn btn-success" data-dismiss="modal" role="button">Add to Your Plants</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+    <!--END ALL MODALS-->
   </body>
 </html>
