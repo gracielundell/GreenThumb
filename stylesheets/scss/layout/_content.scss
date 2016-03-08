@@ -15,25 +15,34 @@
 	border-radius: 3px;
 	transition: all .4s linear; 
 	transition-delay: .2s;
-	@include add-class;
+	@include add-class;	
 
 }
 
 .feature-header {
 	@include feature-header;
-	border-radius: 3px;
+	border-radius: 3px;	
 
-	p {
-		color: #ffffcc;
+	button {
 		margin: 0;
+		margin-left: 20%;
+		height: 8vh;
+		width: 60%;
 		padding: 0;
 		text-align: center;
+
+		span {
+			padding: 0;
+		}
 	}
 }
 
 .move-up {
   animation: slider .5s linear;
-  transform: scale(1.4);
+  transform: scale(1.3);
+  padding: 0;
+  margin: 0;
  	z-index: 999 !important;
 	top: 16vh !important;
+	left: 10vw !important;
 }

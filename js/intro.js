@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	$('.phyllum').each(function() {
-		$(this).click(function() {
-			$(this).toggleClass('move-up');
+		$('button.open').click(function() {
+			$(this).closest('.phyllum').toggleClass('move-up');
+			$('button.open span').toggleClass('visually-hidden');
 		});
 	});
 });

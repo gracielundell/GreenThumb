@@ -52,12 +52,12 @@
   }
 }
 
-@mixin feature-header($class: phyllum, $base-color: green, $num: 5) {
+@mixin feature-header($class: phyllum, $color: green, $num: 5) {
   width: 100%;
   height: 10vh;
   @for $i from 1 through $num {
-    .#{class}:nth-child(#{$i}) & {
-      background: desaturate(darken($base-color, $i * 3%), $i * 1%);
+    .#{$class}:nth-child(#{$i}) & {
+      background: desaturate(darken($color, $i * 3%), $i * 1%);
     }  
   }
 }
