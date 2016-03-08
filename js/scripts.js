@@ -34,8 +34,8 @@ function createBoxDiv(box) {
     return "<div class='box'></div>"
 }
 
-// create circles
 $(document).ready(function() {
+  // create circles
   circleArray.forEach(function(circle) {
     var circleDiv = createCircleDiv(circle);
     $(".circles").append(circleDiv);
@@ -61,6 +61,8 @@ $(document).ready(function() {
     var width = parseInt($("select#width").val());
     var height = parseInt($("select#height").val());
     var squareFt = width * height;
+    $(".plot").css("width", (width * 32));
+    $(".plot").css("height", (height * 32));
     for (i = 0; i < squareFt; i++) {
       $(".plot").append("<div class='box'></div>")
     };
@@ -72,6 +74,8 @@ $(document).ready(function() {
     var width = parseInt($("input#width").val());
     var height = parseInt($("input#height").val());
     var squareFt = width * height;
+    $(".plot").css("width", (width * 32));
+    $(".plot").css("height", (height * 32));
     for (i = 0; i < squareFt; i++) {
       $(".plot").append("<div class='box'></div>")
     };

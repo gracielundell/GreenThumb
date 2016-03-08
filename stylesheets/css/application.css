@@ -11,14 +11,11 @@
   height: 60vh; }
 
 .plot {
-  width: 337px;
+  flex: .1 .1 10%;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   margin: 0px; }
-  @media (min-width: 760px) {
-    .plot {
-      width: 100%; } }
 
 .box {
   border: 1px solid lime;
