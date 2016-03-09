@@ -554,15 +554,5 @@ form {
 .selected {
   border: 5px solid #fc8332; }
 
-/*CSS for plants.html*/
-table {
-  border-collapse: collapse; }
-  table td, table th {
-    border: 1px solid #999;
-    padding: 0.5rem; }
 
-.modal img {
-  float: right;
-  max-width: 200px;
-  height: auto; }
 /*# sourceMappingURL=application.css.map */
