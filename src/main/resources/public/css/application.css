@@ -7,8 +7,8 @@
   background: #7e6551;
   color: #eff7cf;
   border: none;
-  font-size: 15px;
-  padding: 10px; }
+  font-size: 20px;
+  padding: 1px; }
 
 .wrapper {
   min-height: 100%;
@@ -31,10 +31,6 @@ a {
   padding: 10px;
   padding-bottom: 0px; }
 
-.plotPage {
-  overflow: scroll;
-  height: 93vh; }
-
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -46,7 +42,8 @@ a {
 
 .plotButton {
   margin: 10px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  padding: 10px; }
 
 form {
   margin: 5px 0px; }
@@ -102,10 +99,28 @@ form {
 body {
   height: 100%; }
 
-footer {
-  height: 40px;
-  background: #fc8332;
+.homePage {
+  height: 86vh; }
+
+.plotPage {
+  overflow: scroll;
+  height: 93vh; }
+
+.homeFooter {
+  height: 60px;
+  background: #7e6551;
   display: flex; }
+
+.plotFooter {
+  height: 40px;
+  background: #7e6551;
+  display: flex; }
+  .plotFooter .footerButton {
+    padding-top: 5px; }
+
+.footerButton {
+  height: 40px;
+  padding-top: 20px; }
 
 .footerButton {
   justify-content: space-between;

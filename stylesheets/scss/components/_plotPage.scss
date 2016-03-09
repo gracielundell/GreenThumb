@@ -3,11 +3,6 @@
   padding-bottom: 0px;
 }
 
-.plotPage {
-  overflow: scroll;
-  height: 93vh;
-}
-
 .wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +18,7 @@
   margin: 10px;
   border-radius: 5px;
   @extend %buttonStyling;
+  padding: 10px;
 }
 
 form {

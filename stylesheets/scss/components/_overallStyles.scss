@@ -6,11 +6,33 @@ body {
   height: 100%;
 }
 
+.homePage {
+  height: 86vh;
+}
 
-footer {
-  height: 40px;
-  background: $orange;
+.plotPage {
+  overflow: scroll;
+  height: 93vh;
+}
+
+.homeFooter {
+  height: 60px;
+  background: $brown;
   display: flex;
+}
+
+.plotFooter {
+  height: 40px;
+  background: $brown;
+  display: flex;
+  .footerButton {
+    padding-top: 5px;
+  }
+}
+
+.footerButton {
+  height: 40px;
+  padding-top: 20px;
 }
 
 .footerButton {
