@@ -1,14 +1,18 @@
 import java.util.List;
 import org.sql2o.*;
 import java.util.Date;
+import java.time.LocalDateTime;
 
 
 public class Task {
   private String description;
   private int id;
+  private Long createdDate;
+  private Long dueDate;
 
   public Task (String description) {
     this.description = description;
+    this.createdDate = System.currentTimeMillis();
   }
 
   @Override
@@ -31,6 +35,45 @@ public class Task {
     return id;
   }
 
+    public Long getCreatedDate() {
+      return createdDate;
+    }
+
+    public Long getDueDate() {
+      return dueDate;
+    }
+
+    public Long getCreatedDateInMinutes() {
+      return createdDate/60000;
+    }
+
+    public Long getDueDateInMinutes() {
+      return dueDate/60000;
+    }
+
+    public Long getCreatedDateInHours() {
+      return createdDate/60000/60;
+    }
+
+    public Long getDueDateInHours() {
+      return dueDate/60000/60;
+    }
+
+    public Long getCreatedDateInDays() {
+      return createdDate/60000/60/24;
+    }
+
+    public Long getDueDateInDays() {
+      return dueDate/60000/60/24;
+    }
+
+    public Long getCreatedDateinMonths() {
+      return createdDate/60000/60/24/30;
+    }
+
+    public Long getDueDateinMonths() {
+      return dueDate/60000/60/24/30;
+    }
 
   //SETTER METHODS//
 
@@ -38,6 +81,13 @@ public class Task {
     this.description = newDescription;
   }
 
+  public void setDaysTilDue(int datTilDue) {
+    this.dueDate = this.createdDate/1000/60/60 +
+  }
+
+  public void setMonthsTilDue(int datTilDue) {
+    this.dueDate = this.createdDate/1000/60/60/24 + 30
+  }
 
   //CREATE//
   public void save() {
