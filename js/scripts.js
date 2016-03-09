@@ -5,22 +5,31 @@ var circleArray = [
     imgSource: "dirt.png"
   },
   {
-    imgSource: "flower.png"
+    imgSource: "asparagus.png"
   },
   {
-    imgSource: "tomato.png"
+    imgSource: "beet.png"
   },
   {
-    imgSource: "basil.png"
+    imgSource: "broccoli.png"
   },
   {
-    imgSource: "potatoes.png"
+    imgSource: "carrot.png"
   },
   {
     imgSource: "garlic.jpg"
   },
   {
-    imgSource: "carrot.png"
+    imgSource: "lima.png"
+  },
+  {
+    imgSource: "potatoes.png"
+  },
+  {
+    imgSource: "string_beans.png"
+  },
+  {
+    imgSource: "tomato.png"
   }
 ];
 
