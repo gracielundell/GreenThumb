@@ -26,7 +26,7 @@ var circleArray = [
 
 // set img for circles
 function createCircleDiv(circle) {
-  return "<div class='circle' style='background-image:" + "url(\"img/" + circle.imgSource + "\")'></div>"
+  return "<div class='circle' style='background-image:" + "url(\"src/main/resources/public/img/" + circle.imgSource + "\")'></div>"
 };
 
 // create box divs for plot size

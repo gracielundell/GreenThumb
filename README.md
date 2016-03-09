@@ -1,7 +1,6 @@
-
 # GreenThumb
 
-#### Gracie, Paul, Keir, James, and Andrew
+#### Gracie, Paul, Keir, and Andrew
 
 ## GreenThumb is an app to aid people on their gardneing ventures.  It has a watering calendar that will alert you when to water next and it has information on harvest cycles, pest control, moon calendar, and many other things.
 

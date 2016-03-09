@@ -5,17 +5,16 @@ public class DatabaseRule extends ExternalResource {
 
   protected void before() {
     DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/green_thumb_test", null, null);
-   }
+  }
 
-   protected void after() {
-     try(Connection con = DB.sql2o.open()) {
-       String deleteWateringQuery = "DELETE FROM watering *;";
-       // String deleteCoursesQuery = "DELETE FROM courses *;";
-       // String deleteStudentCoursesQuery = "DELETE FROM students_courses *;";
-       con.createQuery(deleteWateringQuery).executeUpdate();
-       // con.createQuery(deleteStudentCoursesQuery).executeUpdate();
-     }
-   }
-
-
+  protected void after() {
+    try(Connection con = DB.sql2o.open()) {
+      String deleteTasksQuery = "DELETE FROM tasks *";
+      String deletePlantsQuery = "DELETE FROM plants *";
+      String deleteTasksPlantsQuery = "DELETE FROM tasks_plants *";
+      con.createQuery(deleteTasksQuery).executeUpdate();
+      con.createQuery(deletePlantsQuery).executeUpdate();
+      con.createQuery(deleteTasksPlantsQuery).executeUpdate();
+    }
+  }
 }
