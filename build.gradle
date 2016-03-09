@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "appname"
+archivesBaseName = "GreenThumb"
 version = '1.0'
 
 archivesBaseName = "Java-GreenThumb"
