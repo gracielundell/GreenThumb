@@ -48,7 +48,8 @@ form {
 .selectSize .dimensions {
   width: 100%;
   display: flex;
-  padding-top: 0px; }
+  padding-top: 0px;
+  padding-left: 10px; }
   .selectSize .dimensions p {
     font-size: 15px; }
 .selectSize select {
@@ -59,7 +60,7 @@ form {
 .circles {
   overflow: auto;
   height: 20vh;
-  width: 100%;
+  width: 90%;
   border: 2px solid #30c5ff;
   margin: 4px;
   display: flex;
