@@ -6,7 +6,8 @@ version = '1.0'
 
 archivesBaseName = "Java-GreenThumb"
 version = '1.0'
-applicationName = "fileName"
+
+applicationName = "GreenThumb"
 
 mainClassName = "App"
 

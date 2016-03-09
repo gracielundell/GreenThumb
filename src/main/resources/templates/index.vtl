@@ -1,15 +1,24 @@
+index.vtl
+<h3>Plants to do list</h3>
 
-<h3>Plants and tasks</h3>
+<p>Create a new plant and add tasks to it:</p>
+
+<form action="/" method="post">
+  <label for="name">Plant name</label>
+  <input id="name" name="name" type="text">
+  <button type="submit" class="btn btn-success">Add Plant</button>
+</form>
 
 
 
 <p> Add tasks to any plant:</p>
 
-<form action="/success" method="post">
 
+<form action="/success" method="post">
   <div class="form-group">
-    <label for="taskId">Select a Plant</label>
-    <select id='taskId' name='taskId' type='text'>
+
+    <label for="task">Select a Plant</label>
+    <select id='task' name='task' type='text'>
     #foreach($plant in $plants)
       <option value="$plant.getId()">$plant.getName()</option>
     #end
@@ -21,8 +30,7 @@
     <input id="description" name="description" type="text" class="form-control">
   </div>
 
-  <button type="submit" class="btn btn-info">Add Task</button>
-</form>
+  <button type="submit" class="btn btn-info">Add Task</button></form>
 
 #if($plants)
   <p>Click on a plant to see their tasks:</p>
@@ -30,8 +38,6 @@
     #foreach($plant in $plants)
       <li><h3><a href="/plants/$plant.getId() ">$plant.getName()</a></h3>
         <a href="/delete/plant/$plant.getId()">Remove</a>
-
-
       </li>
     #end
   </ul>

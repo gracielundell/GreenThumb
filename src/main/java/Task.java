@@ -1,14 +1,18 @@
 import java.util.List;
 import org.sql2o.*;
 import java.util.Date;
+import java.time.LocalDateTime;
 
 
 public class Task {
   private String description;
   private int id;
+  private LocalDateTime createdDate;
+  private LocalDateTime dueDate;
 
   public Task (String description) {
     this.description = description;
+    this.createdDate = LocalDateTime.now();
   }
 
   @Override
@@ -31,6 +35,13 @@ public class Task {
     return id;
   }
 
+    public LocalDateTime getCreatedDate() {
+      return createdDate;
+    }
+
+    public LocalDateTime getDueDate() {
+      return dueDate;
+    }
 
   //SETTER METHODS//
 
@@ -38,6 +49,9 @@ public class Task {
     this.description = newDescription;
   }
 
+  public void setDueDate(int year, int month, int day, int hour, int minute) {
+    this.dueDate = this.dueDate.of(year, month, day, hour, minute);
+  }
 
   //CREATE//
   public void save() {
