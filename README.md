@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # _{Application Name}_
 
 #### _{Brief description of application}, {Date of current version}_
@@ -40,7 +39,7 @@ Copyright (c) 2015 **_David Remington_**
 
 # GreenThumb
 
-#### Gracie, Paul, Keir, James, and Andrew
+#### Gracie, Paul, Keir, and Andrew
 
 ## GreenThumb is an app to aid people on their gardneing ventures.  It has a watering calendar that will alert you when to water next and it has information on harvest cycles, pest control, moon calendar, and many other things.
 
@@ -82,4 +81,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
->>>>>>> 53effb0a6f2bce4c8136e8455489ad91f26bd4fb
