@@ -37,7 +37,7 @@ var circleArray = [
   {
     imgSource: "chard.png"
   },
-
+  {
     imgSource: "garlic.jpg"
   },
   {
