@@ -60,13 +60,13 @@ $(document).ready(function() {
     var width = parseInt($("select#width").val());
     var height = parseInt($("select#height").val());
     var squareFt = width * height;
-    var plotWidth = 360;
+    var plotWidth = 318;
     var plotHeight = 1000;
     $(".plot").empty();
-    $(".plot").css("width", (width * 32));
+    $(".plot").css("width", plotWidth);
     for (i = 0; i < squareFt; i++) {
       $(".plot").append("<div class='box' style='width:" + (plotWidth / width) +
-      "px;height:" + (plotWidth / height) + "px'></div>");
+      "px;height:" + (plotWidth / width) + "px'></div>");
     };
     event.preventDefault();
   });
