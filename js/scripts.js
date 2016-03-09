@@ -8,16 +8,49 @@ var circleArray = [
     imgSource: "asparagus.png"
   },
   {
-    imgSource: "tomato.png"
+    imgSource: "beet.png"
   },
   {
     imgSource: "potatoes.png"
   },
   {
-    imgSource: "garlic.jpg"
+    imgSource: "broccoli.png"
+  },
+  {
+    imgSource: "brussels.png"
+  },
+  {
+    imgSource: "cabbage.png"
+  },
+  {
+    imgSource: "cantaloupe.png"
   },
   {
     imgSource: "carrot.png"
+  },
+  {
+    imgSource: "cauliflower.png"
+  },
+  {
+    imgSource: "celery.jpg"
+  },
+  {
+    imgSource: "chard.png"
+  },
+
+    imgSource: "garlic.jpg"
+  },
+  {
+    imgSource: "lima.png"
+  },
+  {
+    imgSource: "potatoes.png"
+  },
+  {
+    imgSource: "string_beans.png"
+  },
+  {
+    imgSource: "tomato.png"
   }
 ];
 
