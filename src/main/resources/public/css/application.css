@@ -3,38 +3,50 @@
   background-repeat: no-repeat;
   background-position: center; }
 
+.plotButton, .footerButton {
+  background: #7e6551;
+  color: #eff7cf;
+  border: none;
+  font-size: 15px;
+  padding: 10px; }
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  overflow: auto; }
+
 .header {
-  height: 80vh; }
+  height: 80vh;
+  justify-content: center;
+  align-items: center; }
 
 a {
   color: #eff7cf;
   text-decoration: none; }
 
-body {
-  margin: 0px;
-  height: 100vh; }
-
 .feature-header {
   padding: 10px;
   padding-bottom: 0px; }
 
+.plotPage {
+  overflow: scroll;
+  height: 93vh; }
+
 .wrapper {
-  height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 0px; }
   .wrapper p {
     margin-bottom: 0px;
     text-align: center; }
 
-button {
-  border-radius: 5px;
-  background: #7e6551;
-  color: #eff7cf;
-  border: none;
-  font-size: 15px;
+.plotButton {
   margin: 10px;
-  padding: 10px; }
+  border-radius: 5px; }
 
 form {
   margin: 5px 0px; }
@@ -66,8 +78,8 @@ form {
 
 .circles {
   overflow: auto;
-  height: 20vh;
-  width: 90%;
+  height: 40vh;
+  width: 95%;
   border: 2px solid #30c5ff;
   margin: 4px;
   display: flex;
@@ -83,5 +95,21 @@ form {
 
 .selected {
   border: 5px solid #fc8332; }
+
+* {
+  margin: 0; }
+
+body {
+  height: 100%; }
+
+footer {
+  height: 40px;
+  background: #fc8332;
+  display: flex; }
+
+.footerButton {
+  justify-content: space-between;
+  align-items: center;
+  width: 25%; }
 
 /*# sourceMappingURL=application.css.map */

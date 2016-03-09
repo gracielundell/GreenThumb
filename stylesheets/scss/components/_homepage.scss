@@ -1,5 +1,16 @@
+.wrapper {
+  min-height: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  overflow: auto;
+}
+
 .header {
   height: 80vh;
+  justify-content: center;
+  align-items: center;
 }
 a {
   color: $lightgreen;

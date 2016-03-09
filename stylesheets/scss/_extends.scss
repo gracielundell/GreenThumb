@@ -3,3 +3,11 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+%buttonStyling {
+  background: $brown;
+  color: $lightgreen;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+}

@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+}
+
+
+footer {
+  height: 40px;
+  background: $orange;
+  display: flex;
+}
+
+.footerButton {
+  @extend %buttonStyling;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
