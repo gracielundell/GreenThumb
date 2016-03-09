@@ -9,6 +9,7 @@ public class App {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
+
     get("/", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       model.put("plants", Plant.all());
@@ -24,6 +25,11 @@ public class App {
       response.redirect("/");
       return null;
     });
+
+    // get("/gardenPlot", (request, response) -> {
+    //   HashMap<String, Object> model = new HashMap<String, Object>();
+
+    // })
 
     get("/plants/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();

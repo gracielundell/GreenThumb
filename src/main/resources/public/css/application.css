@@ -1,3 +1,6 @@
+
+
+
 /*===================*/
 @keyframes slider {
   50% {
@@ -20,6 +23,7 @@ html {
  * Remove default margin.
  */
 body {
+  background-color: cyan;
   margin: 0; }
 
 /* HTML5 display definitions

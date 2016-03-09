@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="src/main/resources/public/css/application.css" media="screen" title="no title" charset="utf-8">
+    <script src="../js/jquery-1.12.1.js"></script>
+    <script src="../js/scripts.js" charset="utf-8"></script>
+
+    <title>greenThumb</title>
+  </head>
+  <body>
+    <div class="phyllum plotPage">
+  		<div class="feature-header">
+  			<p>Plan Your Plot</p>
+        <p>
+          This Plot Planner is designed to be used by backyard gardeners with individual plots no larger that 144 square feet (12' x 12').
+        </p>
+  		</div>
+  			<div class="wrapper">
+
+  				<!-- imput fields for plot dimensions -->
+          <form class="selectSize">
+            <div class="dimensions">
+              <p>Plot Width (ft)</p>
+                 <select id="width">
+                   <option value="No Size Selected">Width</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4">4</option>
+                   <option value="5">5</option>
+                   <option value="6">6</option>
+                   <option value="7">7</option>
+                   <option value="8">8</option>
+                   <option value="9">9</option>
+                   <option value="10">10</option>
+                   <option value="11">11</option>
+                   <option value="12">12</option>
+                 </select>
+              <p>Plot Length (ft)</p>
+              <select id="height">
+                <option value="No Size Selected">Length</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+               <button type="submit" class="btn btn-lg">Plan Your Plot!</button>
+          </form>
+
+  				<div class="plot">
+  					<!-- where plot dimensions will be -->
+  				</div><!-- end plot -->
+
+          <p>
+            Your Plants
+          </p>
+  			  <div class="circles">
+  					<!-- where different veggie circle will be placed -->
+  			  </div><!-- end circles div -->
+
+  			</div>	<!-- end wrapper -->
+
+  		</div> <!-- end plot page div -->
+
+  </body>
+</html>

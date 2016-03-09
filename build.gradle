@@ -1,17 +1,10 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "appname"
+archivesBaseName = "GreenThumb"
 version = '1.0'
 
-archivesBaseName = "Java-GreenThumb"
-version = '1.0'
-<<<<<<< HEAD
-applicationName = "fileName"
-
-=======
 applicationName = "GreenThumb"
->>>>>>> ff574aad90ff9e60882a8c39598a6e6ec086e455
 mainClassName = "App"
 
 repositories {
