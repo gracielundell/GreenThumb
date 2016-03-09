@@ -5,13 +5,10 @@ var circleArray = [
     imgSource: "dirt.png"
   },
   {
-    imgSource: "flower.png"
+    imgSource: "asparagus.png"
   },
   {
     imgSource: "tomato.png"
-  },
-  {
-    imgSource: "basil.png"
   },
   {
     imgSource: "potatoes.png"

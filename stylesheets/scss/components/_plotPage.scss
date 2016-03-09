@@ -1,0 +1,33 @@
+body {
+  margin: 0px;
+  height: 100vh;
+}
+
+.feature-header {
+  padding: 10px;
+  padding-bottom: 0px;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  p {
+    margin-bottom: 0px;
+    text-align: center;
+  }
+}
+
+button {
+  border-radius: 5px;
+  background: $brown;
+  color: $lightgreen;
+  border: none;
+  font-size: 15px;
+  margin: 10px;
+  padding: 10px;
+}
+
+form {
+  margin: 5px 0px;
+}
