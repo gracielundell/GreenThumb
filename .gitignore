@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 53effb0a6f2bce4c8136e8455489ad91f26bd4fb
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -39,8 +36,7 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
-<<<<<<< HEAD
-=======
+
 
 *.class
 
@@ -54,4 +50,3 @@ gradle-app.setting
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
->>>>>>> 53effb0a6f2bce4c8136e8455489ad91f26bd4fb
