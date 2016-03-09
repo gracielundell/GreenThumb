@@ -1,0 +1,86 @@
+// VARIABLES
+$avocado-color: #BBC655;
+$carrot-color: #FC8332;
+$soil-color: #7E6551;
+$color-light: #EFF7CF;
+$sky-color: #30C5FF;
+$radius: 5px;
+
+header.day-header {
+	border: 2px inset rgba($soil-color,.6);
+	width: 40%;
+	border-radius: $radius;
+}
+
+.schedule-select {
+	width: 90vw;
+	height: 80vh;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	button.schedule {
+		box-sizing: border-box;
+		width: 33vw;
+		padding: 1em 0 1em 0;
+		align-self: flex-end;
+		margin: .5em 0;
+		color: $sky-color;	
+	}
+}
+
+input:not([type="checkbox"]), label, select, option {
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	border: none;
+	background: transparent;
+	border-radius: 3px;
+}
+
+label {
+	width: 40vw;
+}
+
+
+input:not([type="checkbox"]), select.month-select {
+	width: 50vw;
+	height: 6vh;
+	border: 5px inset rgba($soil-color, .3);
+	color: $soil-color;
+}
+
+input::-webkit-input-placeholder {
+		color: $soil-color;
+	}
+
+	// label[for="month"], label[for="year"] {
+	// 	display: inline;
+	// }
+
+
+.form-selects {
+	display: flex;
+	height: 33vh;
+	justify-content: space-around;
+	width: 90vw;
+	select {
+		hieght: 33vh;
+		margin: 0 .2vw;
+		width: 33vw;
+		font-size: 4em;
+		font-weight: bold;
+		border: 2px inset rgba($sky-color,.6);
+		color: $soil-color;
+		&:nth-of-type(3) {
+			font-size: 4em;
+
+			option {
+				text-align: center;
+			}
+		}
+	}
+}
+
+
