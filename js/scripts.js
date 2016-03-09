@@ -14,8 +14,34 @@ var circleArray = [
     imgSource: "broccoli.png"
   },
   {
+    imgSource: "brussels.png"
+  },
+  {
+    imgSource: "cabbage.png"
+  },
+  {
+    imgSource: "cantaloupe.png"
+  },
+  {
     imgSource: "carrot.png"
   },
+  {
+    imgSource: "cauliflower.png"
+  },
+  {
+    imgSource: "celery.jpg"
+  },
+  {
+    imgSource: "chard.png"
+  },
+
+
+
+
+
+
+
+  
   {
     imgSource: "garlic.jpg"
   },
@@ -35,7 +61,7 @@ var circleArray = [
 
 // set img for circles
 function createCircleDiv(circle) {
-  return "<div class='circle' style='background-image:" + "url(\"img/" + circle.imgSource + "\")'></div>"
+  return "<div class='circle' style='background-image:" + "url(\"src/main/resources/public/img/" + circle.imgSource + "\")'></div>"
 };
 
 // create box divs for plot size

@@ -1,0 +1,17 @@
+plants.vtl
+
+<h1>$plant.getName()'s tasks</h1>
+
+#foreach ($task in $plant.getTasks())
+<ul>
+  <li><h3>$task.getDescription()</h3>
+    <a href="/delete/task/$task.getId()">Remove</a>
+  </li>
+</ul>
+#end
+
+<ul>
+  <li>
+    <a href="/">Return to main page</a>
+  </li>
+</ul>
