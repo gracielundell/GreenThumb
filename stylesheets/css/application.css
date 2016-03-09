@@ -3,20 +3,23 @@
   background-repeat: no-repeat;
   background-position: center; }
 
+.header {
+  height: 80vh; }
+
 a {
-  color: white;
+  color: #eff7cf;
   text-decoration: none; }
 
 body {
-  margin: 0px; }
+  margin: 0px;
+  height: 100vh; }
 
 .feature-header {
   padding: 10px;
   padding-bottom: 0px; }
 
 .wrapper {
-  min-height: 100vh;
-  width: 100%;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column; }
