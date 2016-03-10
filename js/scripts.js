@@ -35,7 +35,7 @@ var circleArray = [
     imgSource: "cauliflower.png"
   },
   {
-    imgSource: "celery.jpg"
+    imgSource: "celery.png"
   },
   {
     imgSource: "chard.png"
@@ -44,7 +44,7 @@ var circleArray = [
     imgSource: "chinese-cabbage.png"
   },
   {
-    imgSource: "chives.jpeg"
+    imgSource: "chives.png"
   },
   {
     imgSource: "corn.png"
@@ -62,7 +62,7 @@ var circleArray = [
     imgSource: "endive.png"
   },
   {
-    imgSource: "garlic.jpg"
+    imgSource: "garlic.png"
   },
   {
     imgSource: "kale.png"
@@ -110,7 +110,7 @@ var circleArray = [
     imgSource: "rutabaga.png"
   },
   {
-    imgSource: "spinach.jpeg"
+    imgSource: "spinach.png"
   },
   {
     imgSource: "string_beans.png"
