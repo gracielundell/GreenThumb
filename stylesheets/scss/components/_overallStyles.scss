@@ -31,4 +31,8 @@ body {
 
 .plotPage {
   background: linear-gradient( 0deg, white, white 60%, $blue );
+  padding: 10px;
+  h3 {
+    margin: 5px 0;
+  }
 }

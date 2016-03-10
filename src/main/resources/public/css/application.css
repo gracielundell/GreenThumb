@@ -129,6 +129,9 @@ body {
   width: 25%; }
 
 .plotPage {
-  background: linear-gradient(0deg, white, white 60%, #07B8FF); }
+  background: linear-gradient(0deg, white, white 60%, #07B8FF);
+  padding: 10px; }
+  .plotPage h3 {
+    margin: 5px 0; }
 
 /*# sourceMappingURL=application.css.map */

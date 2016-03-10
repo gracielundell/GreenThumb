@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
     <!--Custom stylesheet-->
+    <link rel="stylesheet" href="src/main/resources/public/css/application.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="src/main/resources/public/css/catalog.css" media="screen" title="no title" charset="utf-8">
 
     <!--jQuery-->
@@ -23,88 +24,98 @@
     <title>Plants</title>
   </head>
   <body>
-    <div class="vegetableList">
-      <div class="artichoke">
-        <a data-target="#artichokeModal" href="#artichokeModal" data-toggle="modal">Artichokes (globe)</a>
-      </div>
+    <div class="plotPage">
+      <h3>Plants to Grow</h3>
+      <div class="vegetableList">
+        <div class="artichoke">
+          <a data-target="#artichokeModal" href="#artichokeModal" data-toggle="modal">Artichokes (globe)</a>
+        </div>
 
 
-      <a data-target="#asparagusModal" href="#asparagusModal" data-toggle="modal">Asparagus</a>
+        <a data-target="#asparagusModal" href="#asparagusModal" data-toggle="modal">Asparagus</a>
 
-      <a data-target="#limabeansModal" href="#limabeansModal" data-toggle="modal">Beans (lima)</a>
+        <a data-target="#limabeansModal" href="#limabeansModal" data-toggle="modal">Beans (lima)</a>
 
-      <a data-target="#limabeansModal" href="#limabeansModal" data-toggle="modal">Beans (snap)</a>
+        <a data-target="#limabeansModal" href="#limabeansModal" data-toggle="modal">Beans (snap)</a>
 
-      <a data-target="#beetsModal" href="#beetsModal" data-toggle="modal">Beets</a>
+        <a data-target="#beetsModal" href="#beetsModal" data-toggle="modal">Beets</a>
 
-      <a data-target="#broccoliModal" href="#broccoliModal" data-toggle="modal">Broccoli</a>
+        <a data-target="#broccoliModal" href="#broccoliModal" data-toggle="modal">Broccoli</a>
 
-      <a data-target="#brusselssproutsModal" href="#brusselssproutsModal" data-toggle="modal">Brussels Sprouts</a>
+        <a data-target="#brusselssproutsModal" href="#brusselssproutsModal" data-toggle="modal">Brussels Sprouts</a>
 
-      <a data-target="#cabbageModal" href="#cabbageModal" data-toggle="modal">Cabbage</a>
+        <a data-target="#cabbageModal" href="#cabbageModal" data-toggle="modal">Cabbage</a>
 
-      <a data-target="#cantaloupesModal" href="#cantaloupesModal" data-toggle="modal">Cantaloupes</a>
+        <a data-target="#cantaloupesModal" href="#cantaloupesModal" data-toggle="modal">Cantaloupes</a>
 
-      <a data-target="#carrotsModal" href="#carrotsModal" data-toggle="modal">Carrots</a>
+        <a data-target="#carrotsModal" href="#carrotsModal" data-toggle="modal">Carrots</a>
 
-      <a data-target="#cauliflowerModal" href="#cauliflowerModal" data-toggle="modal">Cauliflower</a>
+        <a data-target="#cauliflowerModal" href="#cauliflowerModal" data-toggle="modal">Cauliflower</a>
 
-      <a data-target="#celeryModal" href="#celeryModal" data-toggle="modal">Celery</a>
+        <a data-target="#celeryModal" href="#celeryModal" data-toggle="modal">Celery</a>
 
-      <a data-target="#chardModal" href="#chardModal" data-toggle="modal">Chard</a>
+        <a data-target="#chardModal" href="#chardModal" data-toggle="modal">Chard</a>
 
-      <a data-target="#chivesModal" href="#chivesModal" data-toggle="modal">Chives</a>
+        <a data-target="#chivesModal" href="#chivesModal" data-toggle="modal">Chives</a>
 
-      <a data-target="#cornModal" href="#cornModal" data-toggle="modal">Corn</a>
+        <a data-target="#cornModal" href="#cornModal" data-toggle="modal">Corn</a>
 
-      <a data-target="#cucumbersModal" href="#cucumbersModal" data-toggle="modal">Cucumbers</a>
+        <a data-target="#cucumbersModal" href="#cucumbersModal" data-toggle="modal">Cucumbers</a>
 
-      <a data-target="#dillModal" href="#dillModal" data-toggle="modal">Dill</a>
+        <a data-target="#dillModal" href="#dillModal" data-toggle="modal">Dill</a>
 
-      <a data-target="#eggplantsModal" href="#eggplantsModal" data-toggle="modal">Eggplants</a>
+        <a data-target="#eggplantsModal" href="#eggplantsModal" data-toggle="modal">Eggplants</a>
 
-      <a data-target="#endiveModal" href="#endiveModal" data-toggle="modal">Endive</a>
+        <a data-target="#endiveModal" href="#endiveModal" data-toggle="modal">Endive</a>
 
-      <a data-target="#garlicModal" href="#garlicModal" data-toggle="modal">Garlic</a>
+        <a data-target="#garlicModal" href="#garlicModal" data-toggle="modal">Garlic</a>
 
-      <a data-target="#kaleModal" href="#kaleModal" data-toggle="modal">Kale</a>
+        <a data-target="#kaleModal" href="#kaleModal" data-toggle="modal">Kale</a>
 
-      <a data-target="#kohlrabiModal" href="#kohlrabiModal" data-toggle="modal">Kohlrabi</a>
+        <a data-target="#kohlrabiModal" href="#kohlrabiModal" data-toggle="modal">Kohlrabi</a>
 
-      <a data-target="#leeksModal" href="#leeksModal" data-toggle="modal">Leeks</a>
+        <a data-target="#leeksModal" href="#leeksModal" data-toggle="modal">Leeks</a>
 
-      <a data-target="#headlettuceModal" href="#headlettuceModal" data-toggle="modal">Lettuce (head)</a>
+        <a data-target="#headlettuceModal" href="#headlettuceModal" data-toggle="modal">Lettuce (head)</a>
 
-      <a data-target="#okraModal" href="#okraModal" data-toggle="modal">Okra</a>
+        <a data-target="#okraModal" href="#okraModal" data-toggle="modal">Okra</a>
 
-      <a data-target="#onionsModal" href="#onionsModal" data-toggle="modal">Onions</a>
+        <a data-target="#onionsModal" href="#onionsModal" data-toggle="modal">Onions</a>
 
-      <a data-target="#parsleyModal" href="#parsleyModal" data-toggle="modal">Parsley</a>
+        <a data-target="#parsleyModal" href="#parsleyModal" data-toggle="modal">Parsley</a>
 
-      <a data-target="#parsnipsModal" href="#parsnipsModal" data-toggle="modal">Parsnips</a>
+        <a data-target="#parsnipsModal" href="#parsnipsModal" data-toggle="modal">Parsnips</a>
 
-      <a data-target="#peasModal" href="#peasModal" data-toggle="modal">Peas</a>
+        <a data-target="#peasModal" href="#peasModal" data-toggle="modal">Peas</a>
 
-      <a data-target="#peppersModal" href="#peppersModal" data-toggle="modal">Peppers</a>
+        <a data-target="#peppersModal" href="#peppersModal" data-toggle="modal">Peppers</a>
 
-      <a data-target="#sweetpotatoesModal" href="#sweetpotatoesModal" data-toggle="modal">Sweet Potatoes</a>
+        <a data-target="#sweetpotatoesModal" href="#sweetpotatoesModal" data-toggle="modal">Sweet Potatoes</a>
 
-      <a data-target="#pumpkinsModal" href="#pumpkinsModal" data-toggle="modal">Pumpkins</a>
+        <a data-target="#pumpkinsModal" href="#pumpkinsModal" data-toggle="modal">Pumpkins</a>
 
-      <a data-target="#radishModal" href="#radishModal" data-toggle="modal">Radish</a>
+        <a data-target="#radishModal" href="#radishModal" data-toggle="modal">Radish</a>
 
-      <a data-target="#rhubarbModal" href="#rhubarbModal" data-toggle="modal">Rhubarb</a>
+        <a data-target="#rhubarbModal" href="#rhubarbModal" data-toggle="modal">Rhubarb</a>
 
-      <a data-target="#rutabagasModal" href="#rutabagasModal" data-toggle="modal">Rutabagas</a>
+        <a data-target="#rutabagasModal" href="#rutabagasModal" data-toggle="modal">Rutabagas</a>
 
-      <a data-target="#summersquashModal" href="#summersquashModal" data-toggle="modal">Squash</a>
+        <a data-target="#summersquashModal" href="#summersquashModal" data-toggle="modal">Squash</a>
 
-      <a data-target="#tomatoesModal" href="#tomatoesModal" data-toggle="modal">Tomatoes</a>
+        <a data-target="#tomatoesModal" href="#tomatoesModal" data-toggle="modal">Tomatoes</a>
 
-      <a data-target="#turnipsModal" href="#turnipsModal" data-toggle="modal">Turnips</a>
+        <a data-target="#turnipsModal" href="#turnipsModal" data-toggle="modal">Turnips</a>
 
-      <a data-target="#watermelonsModal" href="#watermelonsModal" data-toggle="modal">Watermelons</a>
-    </div>
+        <a data-target="#watermelonsModal" href="#watermelonsModal" data-toggle="modal">Watermelons</a>
+      </div><!-- end vegetable list -->
+    </div><!-- end plantPage div -->
+
+    <footer class="plotFooter">
+      <button type="button" class="footerButton"><a href="index.html">Home</a></button>
+      <button type="button" class="footerButton"><a href="gardenPlot.html">Plots</a></button>
+      <button type="button" class="footerButton"><a href="plants.html">Plants</a></button>
+      <button type="button" class="footerButton"><a href="#">Calender</a></button>
+    </footer>
 
 
     <!--ALL MODALS-->
