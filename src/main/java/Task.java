@@ -64,6 +64,18 @@ public class Task {
     }
   }
 
+  public void addPlant(Plant plant) {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO tasks_plants (plant_id, task_id) VALUES (:plant_id, :task_id);";
+      con.createQuery(sql)
+        .addParameter("plant_id", plant.getId())
+        .addParameter("task_id", this.getId())
+        .executeUpdate();
+    }
+  }
+
+
+
   //READ//
   public static List<Task> all(){
     try(Connection con = DB.sql2o.open()) {
@@ -102,30 +114,22 @@ public class Task {
   }
 
   //UPDATE//
-  public void update() {
+  public void update(String newTaskName) {
+    this.description = newTaskName;
     try(Connection con = DB.sql2o.open()) {
-      String sql = "UPDATE tasks SET description =:description WHERE id=:id";
-        con.createQuery(sql)
-        .addParameter("description", this.description)
-        .addParameter("id", this.id)
-        .executeUpdate();
-    }
-  }
-
-  public void addPlant(Plant plant) {
-    try(Connection con = DB.sql2o.open()) {
-      String sql = "INSERT INTO tasks_plants (plant_id, task_id) VALUES (:plant_id, :task_id);";
+      String sql = "UPDATE tasks SET description =:description WHERE id =:id";
       con.createQuery(sql)
-        .addParameter("plant_id", plant.getId())
-        .addParameter("task_id", this.getId())
-        .executeUpdate();
+      .addParameter("description", newTaskName)
+      .addParameter("id", this.id)
+      .executeUpdate();
     }
-  }
+  }  
+
 
   //DELETE//
   public void delete() {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "DELETE FROM tasks WHERE id = :id";
+      String sql = "DELETE FROM tasks WHERE id = :id; DELETE FROM tasks_plants WHERE task_id = :id;";
       con.createQuery(sql)
         .addParameter("id", this.id)
         .executeUpdate();

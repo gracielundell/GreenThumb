@@ -2,6 +2,28 @@ plants.vtl
 
 <h1>$plant.getName()'s tasks</h1>
 
+<form action="/update/plant/plant.getId()" method="post">
+	<input id="plantId" name="plantId" type="hidden" value="$plant.getId()">
+	<label for="plantName">Plant Name:</label>
+	<textarea class="form-control" rows="1" name="plantName">$plant.getName()</textarea>
+	<button type="submit" class="btn btn-caution">Update Plant</button>
+</form>
+
+<p> Add a task to a plant:</p>
+<form action="/plant/$plant.getId()" method="post">
+  <div class="form-group">
+    <input id="plantId" name="plantId" type="hidden" value="$plant.getId()">
+    <label for="taskId">Assign task to plant</label>
+    <select id="taskId" name="taskId" type="text">
+    #foreach ($task in $tasks)
+    <option value="$task.getId()">$task.getDescription()</option>
+    #end
+    </select>
+    <button type="submit" class="btn btn-success">Add Task</button>
+  </div>
+</form>
+
+
 #foreach ($task in $plant.getTasks())
 <ul>
   <li><h3>$task.getDescription()</h3>
