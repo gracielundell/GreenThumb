@@ -7,23 +7,31 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<header class="day-header"> 
-			<h3>Wednesday</h3><h3>08</h3><h3 class="month">Month</h3><h3 class="year">2016</h3>
+	<header >
+		<div class="schedule-header">
+			<h4 class="day-of-week">Wednesday</h4>
+			<h4 class="day-of-month">08</h4>
+			<h4 class="month">Month</h4>
+			<h4 class="year">2016</h4>
+		</div> 
+		<div class="lunar">
+			<p>lunar phase</p>
+		</div>
 	</header>
 
 	<form class="schedule-select">
 		<div class="check-selects">
-			<label for="repeat">repeat reminder
-				<input type="checkbox" id="repeat" name="repeat">
+				<label for="repeat">repeat reminder<span>&nbsp;</span></label>
+				<input type="checkbox" id="repeat" name="repeat" value="repeat">
+			
+			<label for="water">water task<span></span>
+				<input type="checkbox" id="water" name="water" value="water">
 			</label>
-			<label for="water">water task
-				<input type="checkbox" id="water" name="water">
+			<label for="fertilize">fertilize task<span></span>
+				<input type="checkbox" id="fertilize" name="fertilize" value="fertilize">
 			</label>
-			<label for="fertilize">fertilize task
-				<input type="checkbox" id="fertilize" name="fertilize">
-			</label>
-			<label for="mulch">mulch task
-				<input type="checkbox" id="mulch" name="mulch">
+			<label for="mulch">mulch task<span></span>
+				<input type="checkbox" id="mulch" name="mulch" value="mulch">
 			</label>
 		</div>
 		<label for="year" >Year:
@@ -129,7 +137,16 @@
 		</div>
 		<button class="schedule"> Submit</button>
 	</form>
+	  <footer class="plotFooter">
+      <button type="button" class="footerButton"><a href="index.html">Home</a></button>
+      <button type="button" class="footerButton"><a href="gardenPlot.html">Plots</a></button>
+      <button type="button" class="footerButton"><a href="plants.html">Plants</a></button>
+      <button type="button" class="footerButton"><a href="#">Calender</a></button>
+     </footer>
+
+      <!-- scripts -->
 	<script type="text/javascript" src="js/jquery-1.12.0.js">
 	</script>
+	<script type="text/javascript" src="js/lunar.js"></script>
 </body>
 </html>

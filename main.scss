@@ -6,15 +6,38 @@ $color-light: #EFF7CF;
 $sky-color: #30C5FF;
 $radius: 5px;
 
-header.day-header {
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.lunar {
+	width: 30vw;
+	height: 30vw;
+	color: $carrot-color;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.schedule-header {
 	border: 2px inset rgba($soil-color,.6);
-	width: 40%;
+	width: 30vw;
+	height: 30vw;
 	border-radius: $radius;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	h4 {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 .schedule-select {
 	width: 90vw;
-	height: 80vh;
+	height: 70vh;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -29,9 +52,8 @@ header.day-header {
 		margin: .5em 0;
 		color: $sky-color;	
 	}
-}
 
-input:not([type="checkbox"]), label, select, option {
+	input:not([type="checkbox"]), label, select, option {
 	box-sizing: border-box;
 	-webkit-appearance: none;
 	border: none;
@@ -41,11 +63,12 @@ input:not([type="checkbox"]), label, select, option {
 
 label {
 	width: 40vw;
+	color: $sky-color;
+	font-weight: bold;
 }
 
-
 input:not([type="checkbox"]), select.month-select {
-	width: 50vw;
+	width: 65vw;
 	height: 6vh;
 	border: 5px inset rgba($soil-color, .3);
 	color: $soil-color;
@@ -55,10 +78,16 @@ input::-webkit-input-placeholder {
 		color: $soil-color;
 	}
 
-	// label[for="month"], label[for="year"] {
-	// 	display: inline;
-	// }
-
+	input[type='checkbox'] {
+		display: none;
+		& + label span {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: rgba($soil-color, .2);
+		}
+	}
+}
 
 .form-selects {
 	display: flex;
@@ -73,14 +102,17 @@ input::-webkit-input-placeholder {
 		font-weight: bold;
 		border: 2px inset rgba($sky-color,.6);
 		color: $soil-color;
-		&:nth-of-type(3) {
-			font-size: 4em;
-
-			option {
-				text-align: center;
-			}
-		}
 	}
 }
+
+@for $i from 1 through 7 {
+	.phase-#{$i} {
+		background: url('img/lunar-img/moon-#{$i}.png');
+		background-size: cover;
+		background-repeat: no-repeat; 
+	}
+}
+
+
 
 
