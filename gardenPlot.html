@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/main/resources/public/css/application.css" media="screen" title="no title" charset="utf-8">
     <script src="js/jquery-1.12.0.js"></script>
-    <script src="js/scripts.js" charset="utf-8"></script>
+    <script src="js/scripts.js"></script>
 
     <title>greenThumb</title>
   </head>
@@ -54,7 +54,7 @@
                 <option value="12">12</option>
               </select>
             </div>
-               <button type="submit" class="btn btn-lg">Plan Your Plot!</button>
+               <button type="submit" class="plotButton">Plan Your Plot!</button>
           </form>
 
   				<div class="plot">
@@ -69,8 +69,14 @@
   			  </div><!-- end circles div -->
 
   			</div>	<!-- end wrapper -->
+  		</div> <!-- end plotPage -->
 
-  		</div> <!-- end plot page div -->
+      <footer class="plotFooter">
+        <button type="button" class="footerButton"><a href="index.html">Home</a></button>
+        <button type="button" class="footerButton"><a href="gardenPlot.html">Plots</a></button>
+        <button type="button" class="footerButton"><a href="plants.html">Plants</a></button>
+        <button type="button" class="footerButton"><a href="#">Calender</a></button>
+      </footer>
 
   </body>
 </html>

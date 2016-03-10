@@ -2,6 +2,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import java.util.List;
 import java.util.ArrayList;
+import java.time.LocalDateTime;
 
 
 public class TaskTest {
@@ -72,6 +73,14 @@ public class TaskTest {
     myTask.addPlant(myPlant);
     List savedPlants = myTask.getPlants();
     assertEquals(savedPlants.size(), 1);
+  }
+
+  @Test
+  public void getCreatedDate_returnsDateCreated_LocalDateTime() {
+    Task myTask = new Task("Water");
+    myTask.save();
+    Long nowInMinutes = System.currentTimeMillis()/60000;
+    assertEquals(myTask.getCreatedTimestamp()/60000, nowInMinutes);
   }
 
 }
