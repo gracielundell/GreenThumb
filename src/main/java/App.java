@@ -13,85 +13,111 @@ public class App {
     get("/", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       model.put("plants", Plant.all());
+      model.put("tasks", Task.all());
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/", (request, response) -> {
+    post("/plant", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      String name = request.queryParams("name");
+      String name = request.queryParams("plantName");
       Plant newPlant = new Plant(name);
       newPlant.save();
       response.redirect("/");
       return null;
     });
 
-    // get("/gardenPlot", (request, response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-
-    // })
-
-    get("/plants/:id", (request, response) -> {
+    post("/task", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      Plant plant = Plant.find(Integer.parseInt(request.params(":id")));
-      List<Task> tasks = plant.getTasks();
+      String description = request.queryParams("taskDescription");
+      Task task = new Task(description);
+      task.save();
+      response.redirect("/");
+      return null;
+    });
+
+    get("/plant/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      int id = Integer.parseInt(request.params(":id"));
+      Plant plant = Plant.find(id);
       model.put("plant", plant);
-      model.put("tasks", tasks);
+      model.put("tasks", Task.all());
       model.put("template", "templates/plants.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/success", (request, response) -> {
+    post("/plant/:id", (request, response) ->{
       HashMap<String, Object> model = new HashMap<String, Object>();
-      String description = request.queryParams("description");
+      int plantId = Integer.parseInt(request.queryParams("plantId"));
       int taskId = Integer.parseInt(request.queryParams("taskId"));
-      Plant plant = Plant.find(taskId);
-      Task newTask = new Task(description);
-      newTask.save();
-      plant.addTask(newTask);
-      response.redirect("/plants/" + taskId);
+      Plant plant = Plant.find(plantId);
+      Task task = Task.find(taskId);
+      plant.addTask(task);
+      response.redirect("/plant/" + plantId);
       return null;
     });
 
+    post("/update/plant/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      int plantId = Integer.parseInt(request.params("plantId"));
+      String plantName = request.queryParams("plantName");
+      Plant plant = Plant.find(plantId);
+      plant.update(plantName);
+      response.redirect("/plant/" + plantId);
+      return null;
+    });
+    
     get("/delete/plant/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       Plant plantRemove = Plant.find(Integer.parseInt(request.params(":id")));
       plantRemove.delete();
       model.put("plants", Plant.all());
-      model.put("template", "templates/index.vtl");
+      model.put("template", "templates/plants.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/task/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      int id = Integer.parseInt(request.params("id"));
+      Task task = Task.find(id);
+      model.put("task", task);
+      model.put("plants", Plant.all());
+      model.put("template", "templates/tasks.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/task/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      int taskId = Integer.parseInt(request.queryParams("taskId"));
+      int plantId = Integer.parseInt(request.queryParams("plantId"));
+      Task task = Task.find(taskId);
+      Plant plant = Plant.find(plantId);
+      task.addPlant(plant);
+      response.redirect("/task/" + taskId);
+      return null;
+    });
+
+    post("/update/task/:id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      int taskId = Integer.parseInt(request.params("taskId"));
+      Task task = Task.find(taskId);
+      String taskDescription = request.queryParams("taskDescription");
+      task.update(taskDescription);
+      response.redirect("/task/" + taskId);
+      return null;
+    });
 
     get("/delete/task/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      Plant plantSave = Plant.find(Integer.parseInt(request.params(":id")));
-      Task plant = Task.find(Integer.parseInt(request.params(":id")));
-      plant.delete();
-      model.put("plant", plantSave);
-      model.put("plants", Plant.all());
+      int taskId = Integer.parseInt(request.params(":id"));
+      Task task = Task.find(taskId);
+      task.delete();
       model.put("tasks", Task.all());
       model.put("template", "templates/index.vtl");
-
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/", (request, response) -> {
-      HashMap<String, Object> model = new HashMap<String, Object>();
-      String plantName = request.queryParams("name");
-      Plant plant = new Plant(plantName);
-      plant.save();
-      model.put("plant", Plant.all());
-      model.put("template", "templates/index.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
 
-    get("/plants/:id", (request, response) -> {
-      HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("plant", Plant.find(Integer.parseInt(request.queryParams(":id"))));
-      model.put("wateringSchedule", Water.find(Integer.parseInt(request.queryParams(":id"))));
-      model.put("template", "templates/index.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
 
   }
 }

@@ -75,6 +75,17 @@ public class Plant {
   }
 
   //UPDATE//
+  public void update(String newPlantName) {
+    this.name = newPlantName;
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "UPDATE plants SET name =:name WHERE id =:id";
+      con.createQuery(sql)
+      .addParameter("name", newPlantName)
+      .addParameter("id", this.id)
+      .executeUpdate();
+    }
+  }  
+
   public void addTask(Task task) {
     try(Connection con = DB.sql2o.open()) {
       String sql = "INSERT INTO tasks_plants (plant_id, task_id) VALUES (:plant_id, :task_id);";
@@ -88,7 +99,7 @@ public class Plant {
   //DELETE//
   public void delete() {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "DELETE FROM plants WHERE id = :id";
+      String sql = "DELETE FROM plants WHERE id = :id; DELETE FROM tasks_plants WHERE plant_id =:id";
       con.createQuery(sql)
         .addParameter("id", this.id)
         .executeUpdate();
