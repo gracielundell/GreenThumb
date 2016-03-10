@@ -115,7 +115,7 @@ body {
   height: 93vh; }
 
 .plotFooter {
-  height: 40px;
+  height: 45px;
   background: #7e6551;
   display: flex; }
   .plotFooter .footerButton {
@@ -133,5 +133,18 @@ body {
   padding: 10px; }
   .plotPage h3 {
     margin: 5px 0; }
+
+.plantPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+.vegetableList {
+  padding-left: 10px; }
+  .vegetableList a {
+    color: #fc8332;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 10px; }
 
 /*# sourceMappingURL=application.css.map */

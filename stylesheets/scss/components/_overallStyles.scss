@@ -12,7 +12,7 @@ body {
 }
 
 .plotFooter {
-  height: 40px;
+  height: 45px;
   background: $brown;
   display: flex;
   .footerButton {
@@ -34,5 +34,21 @@ body {
   padding: 10px;
   h3 {
     margin: 5px 0;
+  }
+}
+
+.plantPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.vegetableList {
+  padding-left: 10px;
+  a {
+    color: $orange;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 10px;
   }
 }
