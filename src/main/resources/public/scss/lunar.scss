@@ -1,0 +1,27 @@
+// animations 
+
+#year {
+	&:focus {
+		animation: pop-out .2s ease-out forwards;
+	}
+}
+
+input[type="checkbox"] {
+	&:focus {
+		animation: scale .3s linear forwards;
+	}
+}
+
+
+@keyframes pop-out {
+	25%  {transform: rotate(5deg); }
+	75%  {transform: rotate(-5	deg);}
+	100% {transform: scale(1.4);}
+}
+
+@keyframes scale {
+	100% { transform: scale(2);}
+}
+
+
+

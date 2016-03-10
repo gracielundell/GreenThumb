@@ -5,23 +5,134 @@ var circleArray = [
     imgSource: "dirt.png"
   },
   {
-    imgSource: "flower.png"
+    imgSource: "artichoke.png"
   },
   {
-    imgSource: "tomato.png"
+    imgSource: "asparagus.png"
   },
   {
-    imgSource: "basil.png"
+    imgSource: "beet.png"
   },
   {
     imgSource: "potatoes.png"
   },
   {
-    imgSource: "garlic.jpg"
+    imgSource: "broccoli.png"
+  },
+  {
+    imgSource: "brussels.png"
+  },
+  {
+    imgSource: "cabbage.png"
+  },
+  {
+    imgSource: "cantaloupe.png"
   },
   {
     imgSource: "carrot.png"
-  }
+  },
+  {
+    imgSource: "cauliflower.png"
+  },
+  {
+    imgSource: "celery.png"
+  },
+  {
+    imgSource: "chard.png"
+  },
+  {
+    imgSource: "chinese-cabbage.png"
+  },
+  {
+    imgSource: "chives.png"
+  },
+  {
+    imgSource: "corn.png"
+  },
+  {
+    imgSource: "cucumber.png"
+  },
+  {
+    imgSource: "dill.png"
+  },
+  {
+    imgSource: "eggplant.png"
+  },
+  {
+    imgSource: "endive.png"
+  },
+  {
+    imgSource: "garlic.png"
+  },
+  {
+    imgSource: "kale.png"
+  },
+  {
+    imgSource: "kohlrabi.png"
+  },
+  {
+    imgSource: "leeks.png"
+  },
+  {
+    imgSource: "lettuce.png"
+  },
+  {
+    imgSource: "lima.png"
+  },
+  {
+    imgSource: "ocra.png"
+  },
+  {
+    imgSource: "onions.png"
+  },
+  {
+    imgSource: "parsley.png"
+  },
+  {
+    imgSource: "peas.png"
+  },
+  {
+    imgSource: "peppers.png"
+  },
+  {
+    imgSource: "potatoes.png"
+  },
+  {
+    imgSource: "pumpkin.png"
+  },
+  {
+    imgSource: "radish.png"
+  },
+  {
+    imgSource: "rhubarb.png"
+  },
+  {
+    imgSource: "rutabaga.png"
+  },
+  {
+    imgSource: "spinach.png"
+  },
+  {
+    imgSource: "string_beans.png"
+  },
+  {
+    imgSource: "summer-squash.png"
+  },
+  {
+    imgSource: "sweet-potatoes.png"
+  },
+  {
+    imgSource: "tomato.png"
+  },
+  {
+    imgSource: "turnip.png"
+  },
+  {
+    imgSource: "watermelon.png"
+  },
+  {
+    imgSource: "winter-squash.png"
+  },
 ];
 
 // set img for circles
