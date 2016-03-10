@@ -23,9 +23,6 @@ body {
 .footerButton {
   height: 40px;
   padding-top: 20px;
-}
-
-.footerButton {
   @extend %buttonStyling;
   justify-content: space-between;
   align-items: center;

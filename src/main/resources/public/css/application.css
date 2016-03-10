@@ -122,9 +122,7 @@ body {
 
 .footerButton {
   height: 40px;
-  padding-top: 20px; }
-
-.footerButton {
+  padding-top: 20px;
   justify-content: space-between;
   align-items: center;
   width: 25%; }
