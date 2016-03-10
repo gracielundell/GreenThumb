@@ -16,9 +16,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(0deg, #bbc655, white 20%, #30c5ff); }
+  background: linear-gradient(0deg, #bbc655, white 20%, #07B8FF); }
   .header h1, .header p {
-    color: #7e6551; }
+    color: #7f882d; }
+  .header p {
+    margin: 0 10px; }
+  .header i {
+    font-size: 70px;
+    color: #7f882d; }
 
 a {
   color: #eff7cf;
@@ -82,7 +87,7 @@ form {
   overflow: auto;
   height: 40vh;
   width: 95%;
-  border: 2px solid #30c5ff;
+  border: 2px solid #07B8FF;
   margin: 4px;
   display: flex;
   flex-direction: row;
@@ -123,5 +128,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 25%; }
+
+.plotPage {
+  background: linear-gradient(0deg, white, white 60%, #07B8FF); }
 
 /*# sourceMappingURL=application.css.map */

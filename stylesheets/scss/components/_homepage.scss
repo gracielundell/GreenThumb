@@ -6,7 +6,14 @@
   flex-direction: column;
   background: linear-gradient( 0deg, $green, white 20%, $blue );
   h1, p {
-    color: $brown;
+    color: darken($green, 20%);
+  }
+  p {
+    margin: 0 10px;
+  }
+  i {
+    font-size: 70px;
+    color: darken($green, 20%);
   }
 }
 a {
