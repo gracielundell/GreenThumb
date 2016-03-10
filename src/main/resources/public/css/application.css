@@ -55,13 +55,7 @@ header {
     color: #7E6551; }
   .schedule-select input::-webkit-input-placeholder {
     color: #7E6551; }
-  .schedule-select input[type='checkbox'] {
-    display: none; }
-    .schedule-select input[type='checkbox'] + label span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background: rgba(126, 101, 81, 0.2); }
+
 
 .form-selects {
   display: flex;
