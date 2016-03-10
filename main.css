@@ -1,7 +1,27 @@
-header.day-header {
+header {
+  display: flex;
+  justify-content: space-between; }
+
+.lunar {
+  width: 30vw;
+  height: 30vw;
+  color: #EFF7CF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end; }
+
+.schedule-header {
   border: 2px inset rgba(126, 101, 81, 0.6);
-  width: 40%;
-  border-radius: 5px; }
+  width: 30vw;
+  height: 30vw;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+  .schedule-header h4 {
+    margin: 0;
+    padding: 0; }
 
 .schedule-select {
   width: 90vw;
@@ -27,10 +47,11 @@ input:not([type="checkbox"]), label, select, option {
   border-radius: 3px; }
 
 label {
-  width: 40vw; }
+  width: 40vw;
+  color: #FC8332; }
 
 input:not([type="checkbox"]), select.month-select {
-  width: 50vw;
+  width: 65vw;
   height: 6vh;
   border: 5px inset rgba(126, 101, 81, 0.3);
   color: #7E6551; }
@@ -55,5 +76,40 @@ input::-webkit-input-placeholder {
       font-size: 4em; }
       .form-selects select:nth-of-type(3) option {
         text-align: center; }
+
+.phase-1 {
+  background: url("img/lunar-img/moon-1.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.phase-2 {
+  background: url("img/lunar-img/moon-2.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.phase-3 {
+  background: url("img/lunar-img/moon-3.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.phase-4 {
+  background: url("img/lunar-img/moon-4.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.phase-5 {
+  background: url("img/lunar-img/moon-5.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.phase-6 {
+  background: url("img/lunar-img/moon-6.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.phase-7 {
+  background: url("img/lunar-img/moon-7.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=main.css.map */

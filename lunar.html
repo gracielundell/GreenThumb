@@ -7,23 +7,31 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<header class="day-header"> 
-			<h3>Wednesday</h3><h3>08</h3><h3 class="month">Month</h3><h3 class="year">2016</h3>
+	<header >
+		<div class="schedule-header">
+			<h4 class="day-of-week">Wednesday</h4>
+			<h4 class="day-of-month">08</h4>
+			<h4 class="month">Month</h4>
+			<h4 class="year">2016</h4>
+		</div> 
+		<div class="lunar">
+			<p>lunar phase</p>
+		</div>
 	</header>
 
 	<form class="schedule-select">
 		<div class="check-selects">
 			<label for="repeat">repeat reminder
-				<input type="checkbox" id="repeat" name="repeat">
+				<input type="checkbox" id="repeat" name="repeat" value="repeat">
 			</label>
 			<label for="water">water task
-				<input type="checkbox" id="water" name="water">
+				<input type="checkbox" id="water" name="water" value="water">
 			</label>
 			<label for="fertilize">fertilize task
-				<input type="checkbox" id="fertilize" name="fertilize">
+				<input type="checkbox" id="fertilize" name="fertilize" value="fertilize">
 			</label>
 			<label for="mulch">mulch task
-				<input type="checkbox" id="mulch" name="mulch">
+				<input type="checkbox" id="mulch" name="mulch" value="mulch">
 			</label>
 		</div>
 		<label for="year" >Year:
@@ -131,5 +139,6 @@
 	</form>
 	<script type="text/javascript" src="js/jquery-1.12.0.js">
 	</script>
+	<script type="text/javascript" src="js/lunar.js"></script>
 </body>
 </html>

@@ -6,10 +6,33 @@ $color-light: #EFF7CF;
 $sky-color: #30C5FF;
 $radius: 5px;
 
-header.day-header {
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.lunar {
+	width: 30vw;
+	height: 30vw;
+	color: $color-light;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.schedule-header {
 	border: 2px inset rgba($soil-color,.6);
-	width: 40%;
+	width: 30vw;
+	height: 30vw;
 	border-radius: $radius;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	h4 {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 .schedule-select {
@@ -41,11 +64,12 @@ input:not([type="checkbox"]), label, select, option {
 
 label {
 	width: 40vw;
+	color: $carrot-color;
 }
 
 
 input:not([type="checkbox"]), select.month-select {
-	width: 50vw;
+	width: 65vw;
 	height: 6vh;
 	border: 5px inset rgba($soil-color, .3);
 	color: $soil-color;
@@ -82,5 +106,15 @@ input::-webkit-input-placeholder {
 		}
 	}
 }
+
+@for $i from 1 through 7 {
+	.phase-#{$i} {
+		background: url('img/lunar-img/moon-#{$i}.png');
+		background-size: cover;
+		background-repeat: no-repeat; 
+	}
+}
+
+
 
 
