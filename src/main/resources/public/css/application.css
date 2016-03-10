@@ -10,22 +10,27 @@
   font-size: 20px;
   padding: 1px; }
 
-.wrapper {
-  min-height: 100%;
-  margin-bottom: 20px;
-  padding: 20px;
-  display: flex;
-  text-align: center;
-  overflow: auto; }
-
 .header {
-  height: 80vh;
+  min-height: 100%;
+  display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(0deg, #bbc655, white 20%, #30c5ff); }
+  .header h1, .header p {
+    color: #7e6551; }
 
 a {
   color: #eff7cf;
   text-decoration: none; }
+
+.homeFooter {
+  height: 60px;
+  background: #7e6551;
+  display: flex; }
+
+.homePage {
+  height: 90vh; }
 
 .feature-header {
   padding: 10px;
@@ -99,17 +104,9 @@ form {
 body {
   height: 100%; }
 
-.homePage {
-  height: 86vh; }
-
 .plotPage {
   overflow: scroll;
   height: 93vh; }
-
-.homeFooter {
-  height: 60px;
-  background: #7e6551;
-  display: flex; }
 
 .plotFooter {
   height: 40px;
