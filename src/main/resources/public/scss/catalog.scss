@@ -5,12 +5,35 @@ table {
     border: 1px solid #999;
     padding: 0.5rem; }
 
-.modal img {
-  float: right;
-  max-width: 200px;
-  height: auto; }
+.modal {
+  margin-top: 100px;
+  .modal-dialog {
+    overflow-y: initial;
+  }
+  .modal-body {
+    height: 50vh;
+    overflow-y: auto;
+  }
+  img {
+    float: right;
+    max-width: 200px;
+    height: auto;
+  }
+}
 
 .vegetableList {
   display: flex;
   flex-direction: column;
+}
+
+.vegetableItem {
+  display: flex;
+  border-bottom: 1px solid grey;
+  .vegetableItemPic {
+    order: 1;
+    img {
+      width: 100px;
+      height: 100%;
+    }
+  }
 }
