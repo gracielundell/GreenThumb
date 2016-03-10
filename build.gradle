@@ -5,6 +5,7 @@ archivesBaseName = "GreenThumb"
 version = '1.0'
 
 applicationName = "GreenThumb"
+
 mainClassName = "App"
 
 repositories {
