@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>lunar calendar</title>
 	<link rel="stylesheet" type="text/css" href="../css/application.css">
+	<link rel="stylesheet" type="text/css" href="../scss/lunar.css">
 </head>
 <body>
 	<header >
@@ -17,12 +18,11 @@
 			<p>lunar phase</p>
 		</div>
 	</header>
-
 	<form class="schedule-select">
 		<div class="check-selects">
-				<label for="repeat">repeat reminder<span>&nbsp;</span></label>
+			<label for="repeat">repeat reminder
 				<input type="checkbox" id="repeat" name="repeat" value="repeat">
-			
+			</label>
 			<label for="water">water task<span></span>
 				<input type="checkbox" id="water" name="water" value="water">
 			</label>
@@ -33,8 +33,8 @@
 				<input type="checkbox" id="mulch" name="mulch" value="mulch">
 			</label>
 		</div>
-		<label for="year" >Year:
-				<input type="number" name="year" id="year" value="2016"></input>
+		<label for="year">Year:
+			<input type="number" name="year" id="year" value="2016"></input>
 		</label>
 		<label for="month">Month:
 			<select  id="month" class="month-select">
