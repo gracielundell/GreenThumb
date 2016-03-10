@@ -6,13 +6,29 @@ table td, table th {
   border: 1px solid #999;
   padding: 0.5rem; }
 
-.modal img {
-  float: right;
-  max-width: 200px;
-  height: auto; }
+.modal {
+  margin-top: 50px; }
+  .modal .modal-dialog {
+    overflow-y: initial; }
+  .modal .modal-body {
+    height: 50vh;
+    overflow-y: auto; }
+  .modal img {
+    float: right;
+    max-width: 200px;
+    height: auto; }
 
 .vegetableList {
   display: flex;
   flex-direction: column; }
+
+.vegetableItem {
+  display: flex;
+  border-bottom: 1px solid grey; }
+  .vegetableItem .vegetableItemPic {
+    order: 1; }
+    .vegetableItem .vegetableItemPic img {
+      width: 100px;
+      height: 100%; }
 
 /*# sourceMappingURL=catalog.css.map */

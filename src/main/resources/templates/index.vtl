@@ -1,4 +1,5 @@
 
+
 <ul>
   <li><a href="/html/gardenPlot.html">Garden Plot</a></li>
   <li><a href="/html/plants.html">Plants</a></li>
@@ -7,10 +8,10 @@
 
 
 
-<h3>Plants and Tasks</h3>
 
-<p>Create a new Plant:</p>
+<h1>Plants and Tasks</h1>
 
+<h2>Create a new Plant:</h2>
 <form action="/plant" method="post">
   <label for="plantName">Plant name</label>
   <input id="plantName" name="plantName" type="text">
@@ -26,12 +27,13 @@
 </ul>
 #end
 
-<p>Create a task:</p>
+<h2>Create a task:</h2>
 <form action="/task" method="post">
   <label for="taskDescription">Task description</label>
   <input id="taskDescription" name="taskDescription" type="text">
   <button type="submit" class="btn btn-success">Add Task</button>
 </form>
+
 
 <h2>Task List:</h2>
 #foreach($task in $tasks)
