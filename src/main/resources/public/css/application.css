@@ -1,0 +1,150 @@
+.box, .circle {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.plotButton, .footerButton {
+  background: #7e6551;
+  color: #eff7cf;
+  border: none;
+  font-size: 20px;
+  padding: 1px; }
+
+.header {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(0deg, #bbc655, white 20%, #07B8FF); }
+  .header h1, .header p {
+    color: #7f882d; }
+  .header p {
+    margin: 0 10px; }
+  .header i {
+    font-size: 70px;
+    color: #7f882d; }
+
+a {
+  color: #eff7cf;
+  text-decoration: none; }
+
+.homeFooter {
+  height: 60px;
+  background: #7e6551;
+  display: flex; }
+
+.homePage {
+  height: 90vh; }
+
+.feature-header {
+  padding: 10px;
+  padding-bottom: 0px; }
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0px; }
+  .wrapper p {
+    margin-bottom: 0px;
+    text-align: center; }
+
+.plotButton {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px; }
+
+form {
+  margin: 5px 0px; }
+
+.plot {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  padding: 5px 0px;
+  outline: red;
+  margin: 5px; }
+
+.box {
+  outline: 1px solid #bbc655;
+  background-image: url("../../img/dirt.png"); }
+
+.selectSize .dimensions {
+  width: 100%;
+  display: flex;
+  padding-top: 0px;
+  padding-left: 10px; }
+  .selectSize .dimensions p {
+    font-size: 15px; }
+.selectSize select {
+  margin: 0 5px;
+  margin-top: 16px;
+  justify-content: space-between; }
+
+.circles {
+  overflow: auto;
+  height: 40vh;
+  width: 95%;
+  border: 2px solid #07B8FF;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.circle {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 4px;
+  border: 1px solid #fc8332; }
+
+.selected {
+  border: 5px solid #fc8332; }
+
+* {
+  margin: 0; }
+
+body {
+  height: 100%; }
+
+.plotPage {
+  overflow: scroll;
+  height: 93vh; }
+
+.plotFooter {
+  height: 45px;
+  background: #7e6551;
+  display: flex; }
+  .plotFooter .footerButton {
+    padding-top: 5px; }
+
+.footerButton {
+  height: 40px;
+  padding-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%; }
+
+.plotPage {
+  background: linear-gradient(0deg, white, white 60%, #07B8FF);
+  padding: 10px; }
+  .plotPage h3 {
+    margin: 5px 0; }
+
+.plantPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+.vegetableList {
+  padding-left: 10px; }
+  .vegetableList a {
+    color: #fc8332;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 10px; }
+
+/*# sourceMappingURL=application.css.map */
