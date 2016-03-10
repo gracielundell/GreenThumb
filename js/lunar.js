@@ -32,7 +32,7 @@ if (moonPhaseInt < 4) {
 } else if (moonPhaseInt < 8) {
 	$('.lunar').addClass('phase-2').removeClass('phase-1');	
 } else if (moonPhaseInt < 12) {
-	$('.lunar').addClass('phase-3').removeClass('phase-2');	
+	$('.lunar').addClass('phase-3').removeClass('phase2-');	
 } else if (moonPhaseInt < 16) {
 	$('.lunar').addClass('phase-4').removeClass('phase-3');	
 } else if (moonPhaseInt < 20) {

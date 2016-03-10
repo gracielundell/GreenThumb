@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lunar calendar</title>
+	<link rel="stylesheet" type="text/css" href="src/main/resources/public/css/application.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<header >
+		<div class="schedule-header">
+			<h4 class="day-of-week">Wednesday</h4>
+			<h4 class="day-of-month">08</h4>
+			<h4 class="month">Month</h4>
+			<h4 class="year">2016</h4>
+		</div> 
+		<div class="lunar">
+			<p>lunar phase</p>
+		</div>
+	</header>
+
+	<form class="schedule-select">
+		<div class="check-selects">
+				<label for="repeat">repeat reminder<span>&nbsp;</span></label>
+				<input type="checkbox" id="repeat" name="repeat" value="repeat">
+			
+			<label for="water">water task<span></span>
+				<input type="checkbox" id="water" name="water" value="water">
+			</label>
+			<label for="fertilize">fertilize task<span></span>
+				<input type="checkbox" id="fertilize" name="fertilize" value="fertilize">
+			</label>
+			<label for="mulch">mulch task<span></span>
+				<input type="checkbox" id="mulch" name="mulch" value="mulch">
+			</label>
+		</div>
+		<label for="year" >Year:
+				<input type="number" name="year" id="year" value="2016"></input>
+		</label>
+		<label for="month">Month:
+			<select  id="month" class="month-select">
+				<option value="1">Jan</option>
+				<option value="2">Feb</option>
+				<option value="3"selected="seleceted">March</option>
+				<option value="4">April</option>
+				<option value="5">May</option>
+				<option value="6">June</option>
+				<option value="7">July</option>
+				<option value="8">Aug</option>
+				<option value="9">Sep</option>
+				<option value="10">Oct</option>
+				<option value="11">Nov</option>
+				<option value="12">Dec</option>
+			</select>
+		</label>
+		<div class="form-selects">
+			<select class="hours">
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option selected="selected">06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			</select>
+			<select class="minutes">
+				<option selected="selected">:00</option>
+				<option>:01</option>
+				<option>:02</option>
+				<option>:03</option>
+				<option>:04</option>
+				<option>:05</option>
+				<option>:06</option>
+				<option>:07</option>
+				<option>:08</option>
+				<option>:09</option>
+				<option>:10</option>
+				<option>:11</option>
+				<option>:12</option>
+				<option>:13</option>
+				<option>:14</option>
+				<option>:15</option>
+				<option>:16</option>
+				<option>:17</option>
+				<option>:18</option>
+				<option>:19</option>
+				<option>:20</option>
+				<option>:21</option>
+				<option>:22</option>
+				<option>:23</option>
+				<option>:24</option>
+				<option>:25</option>
+				<option>:26</option>
+				<option>:27</option>
+				<option>:28</option>
+				<option>:29</option>
+				<option>:30</option>
+				<option>:31</option>
+				<option>:32</option>
+				<option>:33</option>
+				<option>:34</option>
+				<option>:35</option>
+				<option>:36</option>
+				<option>:37</option>
+				<option>:38</option>
+				<option>:39</option>
+				<option>:40</option>
+				<option>:41</option>
+				<option>:42</option>
+				<option>:43</option>
+				<option>:44</option>
+				<option>:45</option>
+				<option>:46</option>
+				<option>:47</option>
+				<option>:48</option>
+				<option>:49</option>
+				<option>:50</option>
+				<option>:51</option>
+				<option>:52</option>
+				<option>:53</option>
+				<option>:54</option>
+				<option>:55</option>
+				<option>:56</option>
+				<option>:57</option>
+				<option>:58</option>
+				<option>:59</option>
+			</select>
+			<select class="meridian">
+				<option selected="selected">AM</option>
+				<option>PM</option>
+			</select>
+		</div>
+		<button class="schedule"> Submit</button>
+	</form>
+	  <footer class="plotFooter">
+      <button type="button" class="footerButton"><a href="index.html">Home</a></button>
+      <button type="button" class="footerButton"><a href="gardenPlot.html">Plots</a></button>
+      <button type="button" class="footerButton"><a href="plants.html">Plants</a></button>
+      <button type="button" class="footerButton"><a href="#">Calender</a></button>
+     </footer>
+
+      <!-- scripts -->
+	<script type="text/javascript" src="js/jquery-1.12.0.js">
+	</script>
+	<script type="text/javascript" src="js/lunar.js"></script>
+</body>
+</html>
