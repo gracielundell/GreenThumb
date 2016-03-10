@@ -14,3 +14,15 @@ table {
   display: flex;
   flex-direction: column;
 }
+
+.vegetableItem {
+  display: flex;
+  border-bottom: 1px solid grey;
+  .vegetableItemPic {
+    order: 1;
+    img {
+      width: 100px;
+      height: 100%;
+    }
+  }
+}

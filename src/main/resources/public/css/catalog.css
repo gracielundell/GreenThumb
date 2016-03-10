@@ -15,4 +15,13 @@ table td, table th {
   display: flex;
   flex-direction: column; }
 
+.vegetableItem {
+  display: flex;
+  border-bottom: 1px solid grey; }
+  .vegetableItem .vegetableItemPic {
+    order: 1; }
+    .vegetableItem .vegetableItemPic img {
+      width: 100px;
+      height: 100%; }
+
 /*# sourceMappingURL=catalog.css.map */
