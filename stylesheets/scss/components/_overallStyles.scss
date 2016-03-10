@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+}
+
+.plotPage {
+  overflow: scroll;
+  height: 93vh;
+}
+
+.plotFooter {
+  height: 40px;
+  background: $brown;
+  display: flex;
+  .footerButton {
+    padding-top: 5px;
+  }
+}
+
+.footerButton {
+  height: 40px;
+  padding-top: 20px;
+  @extend %buttonStyling;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+
+.plotPage {
+  background: linear-gradient( 0deg, white, white 60%, $blue );
+}
