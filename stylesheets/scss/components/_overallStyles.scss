@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+}
+
+.plotPage {
+  overflow: scroll;
+  height: 93vh;
+}
+
+.plotFooter {
+  height: 45px;
+  background: $brown;
+  display: flex;
+  .footerButton {
+    padding-top: 5px;
+  }
+}
+
+.footerButton {
+  height: 40px;
+  padding-top: 20px;
+  @extend %buttonStyling;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
+
+.plotPage {
+  background: linear-gradient( 0deg, white, white 60%, $blue );
+  padding: 10px;
+  h3 {
+    margin: 5px 0;
+  }
+}
+
+.plantPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.vegetableList {
+  padding-left: 10px;
+  a {
+    color: $orange;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 50px;
+  }
+}

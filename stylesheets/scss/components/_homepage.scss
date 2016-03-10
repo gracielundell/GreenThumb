@@ -1,0 +1,32 @@
+.header {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient( 0deg, $green, white 20%, $blue );
+  h1, p {
+    color: darken($green, 20%);
+  }
+  p {
+    margin: 0 10px;
+  }
+  i {
+    font-size: 70px;
+    color: darken($green, 20%);
+  }
+}
+a {
+  color: $lightgreen;
+  text-decoration: none;
+}
+
+.homeFooter {
+  height: 60px;
+  background: $brown;
+  display: flex;
+}
+
+.homePage {
+  height: 90vh;
+}
