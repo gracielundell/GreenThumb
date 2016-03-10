@@ -43,11 +43,11 @@ header.lunar-header {
     font-size: 20px;
     padding: 1px;
     box-sizing: border-box;
-    width: 33vw;
-    padding: 1em 0 1em 0;
+    width: 80px;
+    padding: 10px;
     align-self: flex-end;
-    margin: .5em 0;
-    color: #30C5FF; }
+    border-radius: 5px;
+   }
   .schedule-select input:not([type="checkbox"]), .schedule-select label, .schedule-select select, .schedule-select option {
     box-sizing: border-box;
     -webkit-appearance: none;
@@ -56,7 +56,7 @@ header.lunar-header {
     border-radius: 3px; }
   .schedule-select label {
     width: 40vw;
-    color: #30C5FF;
+    color: #7e6551;
     font-weight: bold; }
   .schedule-select input:not([type="checkbox"]), .schedule-select select.month-select {
     width: 65vw;
@@ -66,14 +66,13 @@ header.lunar-header {
   .schedule-select input::-webkit-input-placeholder {
     color: #7E6551; }
 
-
 .form-selects {
   display: flex;
-  height: 33vh;
   justify-content: space-around;
+  margin: 10px 0;
   width: 90vw; }
   .form-selects select {
-    height: 33vh;
+    height: 90px;
     margin: 0 .2vw;
     width: 33vw;
     font-size: 4em;
