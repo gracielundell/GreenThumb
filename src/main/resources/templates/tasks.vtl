@@ -25,10 +25,12 @@ tasks.vtl
 </form>
 
 #foreach ($plant in $task.getPlants())
+
 <ul class="index">
-  <li><h3>$plant.getName()</h3>
-    <a href="/delete/plant/$plant.getId()">Remove</a>
-  </li>
+<form class="" action="/delete/plant/$plant.getId()" method="post">
+	<li><a href="/plant/$plant.getId()">$plant.getName()</a>
+	    <button type='submit'>Remove</button>
+    </li>
+  </form>
 </ul>
 #end
-

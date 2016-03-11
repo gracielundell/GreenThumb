@@ -66,15 +66,16 @@ public class App {
       response.redirect("/plant/" + plantId);
       return null;
     });
-    
-    get("/delete/plant/:id", (request, response) -> {
+
+    post("/delete/plant/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      Plant plantRemove = Plant.find(Integer.parseInt(request.params(":id")));
-      plantRemove.delete();
+      Plant plantId = Plant.find(Integer.parseInt(request.params(":id")));
+      plantId.delete();
       model.put("plants", Plant.all());
       model.put("template", "templates/plants.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+      response.redirect("/");
+      return null;
+    });
 
     get("/task/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
@@ -107,15 +108,14 @@ public class App {
       return null;
     });
 
-    get("/delete/task/:id", (request, response) -> {
+    post("/delete/task/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       int taskId = Integer.parseInt(request.params(":id"));
       Task task = Task.find(taskId);
       task.delete();
       model.put("tasks", Task.all());
-      model.put("template", "templates/index.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
+      response.redirect("/");
+      return null;
+    });
   }
 }
-

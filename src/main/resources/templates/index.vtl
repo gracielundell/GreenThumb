@@ -10,9 +10,12 @@
 <h2>Plant List:</h2>
 #foreach($plant in $plants)
 <ul class="index">
-  <li><a href="/plant/$plant.getId()">$plant.getName()</a>
-  <a href="/delete/plant/$plant.getId()">Remove</a>
-  </li>
+<form class="" action="/delete/plant/$plant.getId()" method="post">
+    <li><a href="/plant/$plant.getId()">$plant.getName()</a>
+    <button type='submit'>Remove</button>
+    </li>
+</form>
+
 </ul>
 #end
 
@@ -27,8 +30,10 @@
 <h2>Task List:</h2>
 #foreach($task in $tasks)
 <ul class="index">
-  <li><a href="/task/$task.getId()">$task.getDescription()</a>
-  <a href="/delete/task/$task.getId()">Remove</a>
-  </li>
+<form class="" action="/delete/task/$task.getId()" method="post">
+    <li><a href="/task/$task.getId()">$task.getDescription()</a>
+    <button type='submit'>Remove</button>
+    </li>
+</form>
 </ul>
 #end
