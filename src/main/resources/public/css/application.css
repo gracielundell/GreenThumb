@@ -8,6 +8,15 @@ ul.index {
 }
 
 
+ul.index li {
+  list-style: none;
+}
+
+ul.index li a {
+  color: #7E6551;;
+}
+
+
 header.lunar-header {
   display: flex;
   justify-content: space-between; }
