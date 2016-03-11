@@ -20,7 +20,7 @@ public class App {
 
     post("/plant", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      String name = request.queryParams("plantName")
+      String name = request.queryParams("plantName");
       Plant newPlant = new Plant(name);
       newPlant.save();
       response.redirect("/");
