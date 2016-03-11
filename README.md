@@ -7,6 +7,19 @@
 
 ## Setup/Installation Requirements
 
+Run webpage with gradle.
+
+In PSQL:
+
+CREATE DATABASE green_thumb;
+
+CREATE TABLE plants (id serial PRIMARY KEY, name varchar);
+
+CREATE TABLE tasks (id serial PRIMARY KEY, description varchar);
+
+CREATE TABLE tasks_plants (id serial PRIMARY KEY, plant_id int, task_id int);
+
+
 * Clone this repository.
 * Make sure you have Java and Gradle installed.
     * For Java:
