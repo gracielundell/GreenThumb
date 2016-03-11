@@ -63,7 +63,7 @@ header.lunar-header {
     align-self: flex-end;
     border-radius: 5px;
    }
-  .schedule-select input:not([type="checkbox"]), .schedule-select label, .schedule-select select, .schedule-select option {
+  .schedule-select input:not([type="checkbox"]), .schedule-select label, .schedule-select select, .schedule-select option, #taskId, #plantId, #taskDescription, #plantName {
     box-sizing: border-box;
     -webkit-appearance: none;
     border: none;
@@ -73,7 +73,7 @@ header.lunar-header {
     width: 40vw;
     color: #7e6551;
     font-weight: bold; }
-  .schedule-select input:not([type="checkbox"]), .schedule-select select.month-select {
+  .schedule-select input:not([type="checkbox"]), .schedule-select select.month-select, #taskId, #plantId, #taskDescription, #plantName {
     width: 65vw;
     height: 6vh;
     border: 5px inset rgba(126, 101, 81, 0.3);
@@ -162,9 +162,10 @@ a {
   text-decoration: none; }
 
 .homeFooter {
-  height: 60px;
+  height: 10vh;
   background: #7e6551;
-  display: flex; }
+  display: flex;
+}
 
 .homePage {
   height: 90vh; }
@@ -243,19 +244,21 @@ body {
   height: 100%; }
 
 .plotPage {
-  overflow: scroll;
-  height: 93vh; }
+  overflow: auto;
+  height: 90vh; }
 
 .plotFooter {
-  height: 45px;
+  height: 10vh;
   background: #7e6551;
-  display: flex; }
-  .plotFooter .footerButton {
-    padding-top: 5px; }
+  display: flex;
+
+
+ }
+  /*.plotFooter .footerButton {
+    padding-top: 5px; }*/
 
 .footerButton {
-  height: 40px;
-  padding-top: 20px;
+  height: 10vh;
   justify-content: space-between;
   align-items: center;
   width: 25%; }
@@ -278,5 +281,10 @@ body {
     font-weight: bold;
     font-size: 15px;
     padding-left: 50px; }
+
+/*Tasks page*/
+.tasks {
+
+}
 
 /*# sourceMappingURL=application.css.map */

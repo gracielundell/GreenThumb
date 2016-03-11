@@ -20,7 +20,7 @@ public class App {
 
     post("/plant", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      String name = request.queryParams("plantName");
+      String name = request.queryParams("plantName")
       Plant newPlant = new Plant(name);
       newPlant.save();
       response.redirect("/");
@@ -59,7 +59,7 @@ public class App {
 
     post("/update/plant/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      int plantId = Integer.parseInt(request.params("plantId"));
+      int plantId = Integer.parseInt(request.queryParams("plantId"));
       String plantName = request.queryParams("plantName");
       Plant plant = Plant.find(plantId);
       plant.update(plantName);

@@ -1,39 +1,42 @@
-<h1>Plants and Tasks</h1>
 
-<h2>Create a new Plant:</h2>
-<form action="/plant" method="post">
-  <label for="plantName">Plant name</label>
-  <input id="plantName" name="plantName" type="text">
-  <button type="submit" class="plotButton">Add Plant</button>
-</form>
+<div class="plotPage tasks">
+  <h1>Plants and Tasks</h1>
 
-<h2>Plant List:</h2>
-#foreach($plant in $plants)
-<ul class="index">
-<form class="" action="/delete/plant/$plant.getId()" method="post">
-    <li><a href="/plant/$plant.getId()">$plant.getName()</a>
-    <button type='submit'>Remove</button>
-    </li>
-</form>
+  <h2>Create a new Plant:</h2>
+  <form action="/plant" method="post">
+    <label for="plantName">Plant name</label>
+    <input id="plantName" name="plantName" type="text">
+    <button type="submit" class="plotButton">Add Plant</button>
+  </form>
 
-</ul>
-#end
+  <h2>Plant List:</h2>
+  #foreach($plant in $plants)
+  <ul class="index">
+  <form class="" action="/delete/plant/$plant.getId()" method="post">
+      <li><a href="/plant/$plant.getId()">$plant.getName()</a>
+      <button type='submit'>Remove</button>
+      </li>
+  </form>
 
-<h2>Create a task:</h2>
-<form action="/task" method="post">
-  <label for="taskDescription">Task description</label>
-  <input id="taskDescription" name="taskDescription" type="text">
-  <button type="submit" class="plotButton">Add Task</button>
-</form>
+  </ul>
+  #end
+
+  <h2>Create a task:</h2>
+  <form action="/task" method="post">
+    <label for="taskDescription">Task description</label>
+    <input id="taskDescription" name="taskDescription" type="text">
+    <button type="submit" class="plotButton">Add Task</button>
+  </form>
 
 
-<h2>Task List:</h2>
-#foreach($task in $tasks)
-<ul class="index">
-<form class="" action="/delete/task/$task.getId()" method="post">
-    <li><a href="/task/$task.getId()">$task.getDescription()</a>
-    <button type='submit'>Remove</button>
-    </li>
-</form>
-</ul>
-#end
+  <h2>Task List:</h2>
+  #foreach($task in $tasks)
+  <ul class="index">
+  <form class="" action="/delete/task/$task.getId()" method="post">
+      <li><a href="/task/$task.getId()">$task.getDescription()</a>
+      <button type='submit'>Remove</button>
+      </li>
+  </form>
+  </ul>
+  #end
+</div>

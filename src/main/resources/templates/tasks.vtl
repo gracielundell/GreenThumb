@@ -1,36 +1,38 @@
 tasks.vtl
 
-<h1>$task.getDescription()</h1>
 
-<form action="/update/task/task.getId()" method="post">
-	<input id="taskId" name="taskId" type="hidden" value="$task.getId()">
-	<label for="taskDescription">Plant Name:</label>
-	<textarea class="form-control" rows="1" name="taskDescription">$task.getDescription()</textarea>
-	<button type="submit" class="plotButton">Update Task</button>
-</form>
+	<h1>$task.getDescription()</h1>
+
+	<form action="/update/task/task.getId()" method="post">
+		<input id="taskId" name="taskId" type="hidden" value="$task.getId()">
+		<label for="taskDescription">Plant Name:</label>
+		<textarea class="form-control" rows="1" name="taskDescription">$task.getDescription()</textarea>
+		<button type="submit" class="plotButton">Update Task</button>
+	</form>
 
 
-<p> Add a plant to a task:</p>
-<form action="/task/$task.getId()" method="post">
-  <div class="form-group">
-    <input id="taskId" name="taskId" type="hidden" value="$task.getId()">
-    <label for="plantId">Assign a task for this plant project </label>
-    <select id="plantId" name="plantId" type="text">
-    #foreach ($plant in $plants)
-    <option value="$plant.getId()">$plant.getName()</option>
-    #end
-    </select>
-    <button type="submit" class="plotButton">Add Plant</button>
-  </div>
-</form>
+	<p> Add a plant to a task:</p>
+	<form action="/task/$task.getId()" method="post">
+	  <div class="form-group">
+	    <input id="taskId" name="taskId" type="hidden" value="$task.getId()">
+	    <label for="plantId">Assign a task for this plant project </label>
+	    <select id="plantId" name="plantId" type="text">
+	    #foreach ($plant in $plants)
+	    <option value="$plant.getId()">$plant.getName()</option>
+	    #end
+	    </select>
+	    <button type="submit" class="plotButton">Add Plant</button>
+	  </div>
+	</form>
 
-#foreach ($plant in $task.getPlants())
+	#foreach ($plant in $task.getPlants())
 
-<ul class="index">
-<form class="" action="/delete/plant/$plant.getId()" method="post">
-	<li><a href="/plant/$plant.getId()">$plant.getName()</a>
-	    <button type='submit'>Remove</button>
-    </li>
-  </form>
-</ul>
+	<ul class="index">
+	<form class="" action="/delete/plant/$plant.getId()" method="post">
+		<li><h4><a href="/plant/$plant.getId()">$plant.getName()</a></h4>
+		    <button type='submit'>Remove</button>
+	    </li>
+	  </form>
+	</ul>
+
 #end
