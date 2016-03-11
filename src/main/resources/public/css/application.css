@@ -1,5 +1,10 @@
-.calendar {
+.calendar, .linear {
   background: linear-gradient(0deg, white, white 60%, #07B8FF);
+}
+
+ul.index {
+  color: #7e6551;
+  list-style: none;
 }
 
 
@@ -35,7 +40,8 @@ header.lunar-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  overflow: auto; }
   .schedule-select button.schedule {
     background: #7e6551;
     color: #eff7cf;
