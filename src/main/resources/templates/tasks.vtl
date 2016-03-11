@@ -6,7 +6,7 @@ tasks.vtl
 	<input id="taskId" name="taskId" type="hidden" value="$task.getId()">
 	<label for="taskDescription">Plant Name:</label>
 	<textarea class="form-control" rows="1" name="taskDescription">$task.getDescription()</textarea>
-	<button type="submit" class="btn btn-caution">Update Task</button>
+	<button type="submit" class="plotButton">Update Task</button>
 </form>
 
 
@@ -14,26 +14,21 @@ tasks.vtl
 <form action="/task/$task.getId()" method="post">
   <div class="form-group">
     <input id="taskId" name="taskId" type="hidden" value="$band.getId()">
-    <label for="plantId">Assign venue to a band</label>
+    <label for="plantId">Assign a task for this plant project </label>
     <select id="plantId" name="plantId" type="text">
     #foreach ($plant in $plants)
     <option value="$plant.getId()">$plant.getName()</option>
     #end
     </select>
-    <button type="submit" class="btn btn-success">Add Plant</button>
+    <button type="submit" class="plotButton">Add Plant</button>
   </div>
 </form>
 
 #foreach ($plant in $task.getPlants())
-<ul>
+<ul class="index">
   <li><h3>$plant.getName()</h3>
     <a href="/delete/plant/$plant.getId()">Remove</a>
   </li>
 </ul>
 #end
 
-<ul>
-  <li>
-    <a href="/">Return to main page</a>
-  </li>
-</ul>

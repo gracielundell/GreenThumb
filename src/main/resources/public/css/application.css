@@ -1,5 +1,17 @@
-.calendar {
+.calendar, .linear {
   background: linear-gradient(0deg, white, white 60%, #07B8FF);
+}
+
+ul.index {
+  list-style: none;
+}
+
+ul.index li {
+  list-style: none;
+}
+
+ul.index li a {
+  color: #7E6551;;
 }
 
 
